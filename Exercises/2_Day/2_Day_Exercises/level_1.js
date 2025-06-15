@@ -28,6 +28,6 @@ console.log(challenge.charCodeAt("J"));
 
 console.log(challenge.indexOf("a"));
 
-console.log('a')
+console.log("Here");
 
-console.log(challenge.indexOf("a"));
+console.log(challenge.lastIndexOf("a")); //SECTION : level 16

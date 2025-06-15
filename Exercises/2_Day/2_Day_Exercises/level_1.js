@@ -25,3 +25,9 @@ console.log(challenge.replace("JavaScript", "Pyton"));
 console.log(challenge.charAt(15));
 
 console.log(challenge.charCodeAt("J"));
+
+console.log(challenge.indexOf("a"));
+
+console.log('a')
+
+console.log(challenge.indexOf("a"));

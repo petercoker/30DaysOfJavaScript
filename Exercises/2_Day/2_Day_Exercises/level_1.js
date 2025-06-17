@@ -1,4 +1,10 @@
 let challenge = "30 Days of JavaScript";
+let company = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon";
+let sentence =
+  "You cannot end a sentence with because because because is a conjunction";
+const searchTerm = "because";
+let match = "30 Days of JavaScript";
+let thirtyDaysOfJavaScript = " 30 Days Of JavaScript ";
 
 console.log(challenge);
 
@@ -16,8 +22,6 @@ console.log(challenge.includes("Script"));
 
 console.log(challenge.split(" "));
 
-let company = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon";
-
 console.log(company.split(" "));
 
 console.log(challenge.replace("JavaScript", "Pyton"));
@@ -32,9 +36,6 @@ console.log("Here");
 
 console.log(challenge.lastIndexOf("a"));
 
-let sentence =
-  "You cannot end a sentence with because because because is a conjunction";
-const searchTerm = "because";
 const indexOfFirst = sentence.indexOf(searchTerm);
 
 console.log(
@@ -54,4 +55,12 @@ console.log(
   )}`
 );
 
-//SECTION : next level 19
+console.log(sentence.search(searchTerm));
+
+console.log(thirtyDaysOfJavaScript.trim());
+
+console.log(challenge.startsWith(match));
+console.log(challenge.endsWith(match));
+
+//SECTION : next level 23
+console.log(challenge.match('a'))

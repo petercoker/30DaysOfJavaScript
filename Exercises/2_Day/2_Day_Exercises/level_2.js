@@ -13,4 +13,4 @@ let numberValue = 10;
 console.log(typeof stringValue === numberValue);
 console.log(Number(stringValue) === numberValue);
 
-// SECTION level 4
+// SECTION level 2 exercise 4

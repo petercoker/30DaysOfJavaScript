@@ -5,6 +5,8 @@ let sentence =
 const searchTerm = "because";
 let match = "30 Days of JavaScript";
 let thirtyDaysOfJavaScript = " 30 Days Of JavaScript ";
+let part1 = "30 Days of";
+let part2 = "JavaScript";
 
 console.log(challenge);
 
@@ -64,9 +66,6 @@ console.log(challenge.endsWith(match));
 
 console.log(challenge.match(/a/g)); // Regex to find all the a's
 
-let part1 = "30 Days of";
-let part2 = "JavaScript";
 console.log(part1.concat(" ", part2)); // Adding a space in between
 
-//SECTION : next level 24
 console.log(challenge.repeat(2));

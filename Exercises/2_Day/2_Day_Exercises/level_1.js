@@ -1,4 +1,4 @@
-let challenge = "30 Days of JavaScript";
+let challenge = "30 Days of JavaScript ";
 let company = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon";
 let sentence =
   "You cannot end a sentence with because because because is a conjunction";
@@ -62,5 +62,11 @@ console.log(thirtyDaysOfJavaScript.trim());
 console.log(challenge.startsWith(match));
 console.log(challenge.endsWith(match));
 
-//SECTION : next level 23
-console.log(challenge.match(/a/g)); //regex to find all the a's
+console.log(challenge.match(/a/g)); // Regex to find all the a's
+
+let part1 = "30 Days of";
+let part2 = "JavaScript";
+console.log(part1.concat(" ", part2)); // Adding a space in between
+
+//SECTION : next level 24
+console.log(challenge.repeat(2));

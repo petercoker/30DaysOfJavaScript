@@ -63,4 +63,4 @@ console.log(challenge.startsWith(match));
 console.log(challenge.endsWith(match));
 
 //SECTION : next level 23
-console.log(challenge.match('a'))
+console.log(challenge.match(/a/g)); //regex to find all the a's

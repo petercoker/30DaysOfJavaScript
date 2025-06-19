@@ -6,7 +6,10 @@ let motherTeresa =
 
 let myNumber = parseFloat("9.8");
 let rounded = Math.round(myNumber);
-
+let searchTerm = "on";
+let sentence = "I hope this course is not full of jargon";
+let python = "python";
+let jargon = "jargon";
 console.log(message);
 console.log(motherTeresa);
 
@@ -18,4 +21,10 @@ console.log(Number(stringValue) === numberValue);
 
 console.log(rounded === 10);
 
-// SECTION level 2 exercise 5
+console.log(python.includes(searchTerm) && jargon.includes(searchTerm));
+
+console.log(sentence.includes(jargon));
+
+console.log(Math.floor(Math.random() * 101));
+
+// SECTION level 2 exercise 8

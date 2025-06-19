@@ -4,6 +4,9 @@ let message =
 let motherTeresa =
   "Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.";
 
+let myNumber = parseFloat("9.8");
+let rounded = Math.round(myNumber);
+
 console.log(message);
 console.log(motherTeresa);
 
@@ -13,4 +16,6 @@ let numberValue = 10;
 console.log(typeof stringValue === numberValue);
 console.log(Number(stringValue) === numberValue);
 
-// SECTION level 2 exercise 4
+console.log(rounded === 10);
+
+// SECTION level 2 exercise 5

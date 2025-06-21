@@ -28,4 +28,13 @@ console.log(sentence.includes(jargon));
 console.log(Math.floor(Math.random() * 101));
 
 console.log(Math.floor(Math.random() * (100 - 50 + 1)) + 50);
-// SECTION level 2 exercise 8
+
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min) + 1) + min;
+}
+
+console.log(getRandomNumber(50, 100));
+
+console.log(Math.floor(Math.random() * (255 - 0 + 1)));
+
+// SECTION level 2 exercise 9

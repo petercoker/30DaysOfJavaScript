@@ -10,6 +10,8 @@ let searchTerm = "on";
 let sentence = "I hope this course is not full of jargon";
 let python = "python";
 let jargon = "jargon";
+let javaScript = "JavaScript";
+
 console.log(message);
 console.log(motherTeresa);
 
@@ -37,4 +39,7 @@ console.log(getRandomNumber(50, 100));
 
 console.log(Math.floor(Math.random() * (255 - 0 + 1)));
 
-// SECTION level 2 exercise 9
+let randomIndex = Math.floor(Math.random() * javaScript.length);
+console.log(javaScript[randomIndex]);
+
+// SECTION level 2 exercise 11

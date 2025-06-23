@@ -42,4 +42,19 @@ console.log(Math.floor(Math.random() * (255 - 0 + 1)));
 let randomIndex = Math.floor(Math.random() * javaScript.length);
 console.log(javaScript[randomIndex]);
 
-// SECTION level 2 exercise 11
+console.log("1\t1\t1\t1\t1");
+console.log("2\t1\t2\t4\t8");
+console.log("3\t1\t3\t9\t27");
+console.log("4\t1\t4\t16\t64");
+console.log("5\t1\t5\t25\t125");
+
+// another way
+console.log(
+  "1\t1\t1\t1\t1\n" +
+    "2\t1\t2\t4\t8\n" +
+    "3\t1\t3\t9\t27\n" +
+    "4\t1\t4\t16\t64\n" +
+    "5\t1\t5\t25\t125" // No \n on the last line unless you want an extra blank line
+);
+
+// SECTION level 2 exercise 12

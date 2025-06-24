@@ -12,6 +12,8 @@ let python = "python";
 let jargon = "jargon";
 let javaScript = "JavaScript";
 
+const sentence = 'You cannot end a sentence with because because because is a conjunction'
+
 console.log(message);
 console.log(motherTeresa);
 
@@ -56,5 +58,7 @@ console.log(
     "4\t1\t4\t16\t64\n" +
     "5\t1\t5\t25\t125" // No \n on the last line unless you want an extra blank line
 );
+
+console.log(sentence.substring(31, 54)); 
 
 // SECTION level 2 exercise 12

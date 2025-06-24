@@ -61,4 +61,4 @@ console.log(
 
 console.log(sentence.substring(31, 54)); 
 
-// SECTION level 2 exercise 12
+// SECTION level 3 exercise 1

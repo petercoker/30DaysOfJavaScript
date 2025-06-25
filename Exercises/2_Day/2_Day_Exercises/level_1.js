@@ -36,26 +36,26 @@ console.log(challenge.indexOf("a"));
 
 console.log(challenge.lastIndexOf("a"));
 
-const indexOfFirst = sentence.indexOf(searchTerm);
+const indexOfFirst = hopefulMessage.indexOf(searchTerm);
 
 console.log(
   `The index of the first occurrence "${searchTerm}" is ${indexOfFirst}`
 );
 
 console.log(
-  `The index of the second occurrence  "${searchTerm}" is ${sentence.indexOf(
+  `The index of the second occurrence  "${searchTerm}" is ${hopefulMessage.indexOf(
     searchTerm,
     indexOfFirst + 1
   )}`
 );
 
 console.log(
-  `The index of the last occurrence "${searchTerm}" is ${sentence.lastIndexOf(
+  `The index of the last occurrence "${searchTerm}" is ${hopefulMessage.lastIndexOf(
     searchTerm
   )}`
 );
 
-console.log(sentence.search(searchTerm));
+console.log(hopefulMessage.search(searchTerm));
 
 console.log(thirtyDaysOfJavaScript.trim());
 

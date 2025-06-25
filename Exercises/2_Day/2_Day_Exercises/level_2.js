@@ -7,12 +7,18 @@ let motherTeresa =
 let myNumber = parseFloat("9.8");
 let rounded = Math.round(myNumber);
 let searchTerm = "on";
-let sentence = "I hope this course is not full of jargon";
+let hopefulMessage = "I hope this course is not full of jargon";
 let python = "python";
 let jargon = "jargon";
 let javaScript = "JavaScript";
 
-const sentence = 'You cannot end a sentence with because because because is a conjunction'
+const sentenceWithConjunction =
+  "You cannot end a sentence with because because because is a conjunction";
+
+const sentenceAboutLove =
+  "Love is the best thing in this world. Some found their love and some are still looking for their love.";
+
+const countWord = "love";
 
 console.log(message);
 console.log(motherTeresa);
@@ -27,7 +33,7 @@ console.log(rounded === 10);
 
 console.log(python.includes(searchTerm) && jargon.includes(searchTerm));
 
-console.log(sentence.includes(jargon));
+console.log(hopefulMessage.includes(jargon));
 
 console.log(Math.floor(Math.random() * 101));
 
@@ -59,6 +65,11 @@ console.log(
     "5\t1\t5\t25\t125" // No \n on the last line unless you want an extra blank line
 );
 
-console.log(sentence.substring(31, 54)); 
+console.log(sentenceWithConjunction.substring(31, 54));
 
 // SECTION level 3 exercise 1
+const sentenceAboutLoveToLowerCase = sentenceAboutLove.toLowerCase();
+const countWordToLowerCase = countWord.toLowerCase();
+console.log(
+  sentenceAboutLoveToLowerCase.split(countWordToLowerCase).length - 1
+);

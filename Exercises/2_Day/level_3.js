@@ -17,8 +17,13 @@ console.log(
   sentenceAboutLoveToLowerCase.split(countWordToLowerCase).length - 1
 );
 
-// SECTION level 3 exercise 1
 console.log(sentenceWithConjunction.match(/because/g).length);
 
 // Removing all characters except letters and numbers
 console.log(sentence.replace(/[^\p{L}\d\s]+/gu, ""));
+
+console.log(sentence.replace(/[^a-zA-Z0-9\s]+/g, ""));
+
+// SECTION level 3 exercise 4
+let questionText = "1 ding ?";
+console.log(questionText.match(/\d+/)[0]);

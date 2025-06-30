@@ -56,3 +56,5 @@ totalAnnualIncome =
   monthlySalary * 12 + annualBonus + monthlyCoursesIncome * 12;
 
 console.log(`The total annual income is: ${totalAnnualIncome} euro`);
+
+

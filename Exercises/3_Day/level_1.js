@@ -45,3 +45,28 @@ console.log("\n--- Caret Inside Square Brackets (Negation) ---");
 console.log("Word 1 ('cat'):", word1.match(regexNegate)); // Output: null (First char 'c' is forbidden)
 console.log("Word 2 ('bat'):", word2.match(regexNegate)); // Output: ["bar"] ('b' is allowed, followed by 'ar')
 console.log("Word 3 ('star'):", word3.match(regexNegate)); // Output: ["tar"] ('t' is allowed, followed by 'ar')
+
+// Regex: /bo*k/
+// b  : Matches 'b'
+// o* : Matches zero or more 'o's (so 'o' is optional and can repeat)
+// k  : Matches 'k'
+const regexBook = /bo*k/g; // 'g' to find all matches
+
+console.log("--- '*' after a single character ---");
+
+
+
+word1 = "bk"; // 'o' appears zero times
+console.log(`"${word1}" matches:`, word1.match(regexBook)); // Output: ["bk"]
+
+word2 = "bok"; // 'o' appears one time
+console.log(`"${word2}" matches:`, word2.match(regexBook)); // Output: ["bok"]
+
+word3 = "booook"; // 'o' appears multiple times
+console.log(`"${word3}" matches:`, word3.match(regexBook)); // Output: ["booook"]
+
+const word4 = "brick"; // Does not match the pattern
+console.log(`"${word4}" matches:`, word4.match(regexBook)); // Output: null
+
+let senstence = ''
+

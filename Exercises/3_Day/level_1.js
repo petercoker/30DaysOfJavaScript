@@ -54,8 +54,6 @@ const regexBook = /bo*k/g; // 'g' to find all matches
 
 console.log("--- '*' after a single character ---");
 
-
-
 word1 = "bk"; // 'o' appears zero times
 console.log(`"${word1}" matches:`, word1.match(regexBook)); // Output: ["bk"]
 
@@ -68,5 +66,17 @@ console.log(`"${word3}" matches:`, word3.match(regexBook)); // Output: ["booook"
 const word4 = "brick"; // Does not match the pattern
 console.log(`"${word4}" matches:`, word4.match(regexBook)); // Output: null
 
-let senstence = ''
+let senstence = "";
 
+//*
+//
+
+
+//*/
+
+//**!SECTION
+// The + symbol matches one or more repetitions of the preceding character. For example, the regular expression c.+t means: a lowercase c, followed by at least one character, followed by a lowercase t. It needs to be clarified thatt is the last t in the sentence.
+// "c.+t" => The fat cat sat on the mat.
+//INFO : What confusing me is the difference betwen . and + together as well as what . is again 
+//  */
+console.log("confused ");

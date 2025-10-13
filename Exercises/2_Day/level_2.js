@@ -59,3 +59,5 @@ console.log(
     "5\t1\t5\t25\t125" // No \n on the last line unless you want an extra blank line
 );
 
+console.log('hello')
+

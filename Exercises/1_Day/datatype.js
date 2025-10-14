@@ -5,6 +5,9 @@ console.log(typeof undeclaredVariable); // undefined
 console.log(typeof []);
 console.log(typeof [3, 5]);
 
+String, number, null, symbol, undefined, Boolean
+
+
 let one, two, three, four;
 
 let one2 = "one2";

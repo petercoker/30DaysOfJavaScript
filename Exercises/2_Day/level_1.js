@@ -7,6 +7,7 @@ let match = "30 Days of JavaScript";
 let thirtyDaysOfJavaScript = " 30 Days Of JavaScript ";
 let part1 = "30 Days of";
 let part2 = "JavaScript";
+let hopefulMessage = "I hope this course is not full of jargon";
 
 console.log(challenge);
 
@@ -67,3 +68,6 @@ console.log(challenge.match(/a/g)); // Regex to find all the a's
 console.log(part1.concat(" ", part2)); // Adding a space in between
 
 console.log(challenge.repeat(2));
+
+const parargah = "My name is peter cokerI live in DubiinI am 31 years old";
+console.log(parargah);

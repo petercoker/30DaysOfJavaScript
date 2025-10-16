@@ -37,21 +37,21 @@ console.log(challenge.indexOf("a"));
 
 console.log(challenge.lastIndexOf("a"));
 
-const indexOfFirst = hopefulMessage.indexOf(searchTerm);
+const indexOfFirst = sentence.indexOf(searchTerm);
 
 console.log(
   `The index of the first occurrence "${searchTerm}" is ${indexOfFirst}`
 );
 
 console.log(
-  `The index of the second occurrence  "${searchTerm}" is ${hopefulMessage.indexOf(
+  `The index of the second occurrence  "${searchTerm}" is ${sentence.indexOf(
     searchTerm,
     indexOfFirst + 1
   )}`
 );
 
 console.log(
-  `The index of the last occurrence "${searchTerm}" is ${hopefulMessage.lastIndexOf(
+  `The index of the last occurrence "${searchTerm}" is ${sentence.lastIndexOf(
     searchTerm
   )}`
 );

@@ -26,7 +26,7 @@ let text =
 
 // Robust version
 text =
-  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python, May.";
 const words1 = text
   .replaceAll(/[^\w\s]/g, "") // Removes punctuation
   .trim() // Removes leading/trailing whitespace

@@ -1,3 +1,4 @@
+import { countries } from "./countries.js";
 // 1, Create a separate countries.js file and store the countries array in to this file,
 // Create a separate file web_techs.js and store the webTechs array in to this file.
 // Access both file in main.js file
@@ -91,3 +92,26 @@ console.log(shoppingCart);
 /* Output: 
 ["Meat", "Milk", "Coffee", "Green Tea", "Sugar"] 
 */
+
+// 4. In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
+
+if (countries.includes("Ethiopia")) {
+  console.log("ETHIOPIA");
+} else {
+  countries.push("ETHIOPIA");
+}
+
+
+// best practice 
+
+const countryExists = countries.some((c) => c.toLowerCase() === "ethiopia");
+
+if (countryExists) {
+  console.log("ETHIOPIA");
+} else {
+  // 2. Non-mutating Add (Best Practice)
+  // We create a NEW array using the spread operator
+  const updatedCountries = [...countries, "Ethiopia"];
+  console.log("Added Ethiopia to the list.");
+  console.log(updatedCountries);
+}

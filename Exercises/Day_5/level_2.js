@@ -1,4 +1,6 @@
 import { countries } from "./countries.js";
+import { webTechs } from "./webTechs.js";
+
 // 1, Create a separate countries.js file and store the countries array in to this file,
 // Create a separate file web_techs.js and store the webTechs array in to this file.
 // Access both file in main.js file
@@ -101,8 +103,7 @@ if (countries.includes("Ethiopia")) {
   countries.push("ETHIOPIA");
 }
 
-
-// best practice 
+// best practice
 
 const countryExists = countries.some((c) => c.toLowerCase() === "ethiopia");
 
@@ -114,4 +115,19 @@ if (countryExists) {
   const updatedCountries = [...countries, "Ethiopia"];
   console.log("Added Ethiopia to the list.");
   console.log(updatedCountries);
+}
+
+// 5. In the webTechs array check if Sass exists in the array  and if it exists print 'Sass is a CSS preprocess'.
+// If it does not exist add Sass to the array and print the array.
+
+const exist = webTechs.some((stack) => {
+  const item = stack.charAt(0).toUpperCase() + stack.slice(1);
+  return item === "Sass";
+});
+
+if (exist) {
+  console.log("Sass is a CSS preprocess");
+} else {
+  const updatedWebTechs = [...webTechs, "Sass"];
+  console.log(updatedWebTechs);
 }

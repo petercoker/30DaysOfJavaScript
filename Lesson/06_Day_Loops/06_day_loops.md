@@ -7,28 +7,29 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
-  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> January, 2020</small>
-  </sub>
+  `<sub>`Author:
+  `<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">`Asabeneh Yetayeh`</a><br>`
+  `<small>` January, 2020`</small>`
+  `</sub>`
+
 </div>
 
-[<< Day 5](../05_Day_Arrays/05_day_arrays.md) | [Day 7 >>](../07_Day_Functions/07_day_functions.md)
+[&lt;&lt; Day 5](../05_Day_Arrays/05_day_arrays.md) | [Day 7 &gt;&gt;](../07_Day_Functions/07_day_functions.md)
 
 ![Day 5](../images/banners/day_1_6.png)
 
 - [📔 Day 6](#-day-6)
-	- [Loops](#loops)
-		- [for Loop](#for-loop)
-		- [while loop](#while-loop)
-		- [do while loop](#do-while-loop)
-		- [for of loop](#for-of-loop)
-		- [break](#break)
-		- [continue](#continue)
-	- [💻 Exercises:Day 6](#-exercisesday-6)
-		- [Exercises: Level 1](#exercises-level-1)
-		- [Exercises: Level 2](#exercises-level-2)
-		- [Exercises: Level 3](#exercises-level-3)
+  - [Loops](#loops)
+    - [for Loop](#for-loop)
+    - [while loop](#while-loop)
+    - [do while loop](#do-while-loop)
+    - [for of loop](#for-of-loop)
+    - [break](#break)
+    - [continue](#continue)
+  - [💻 Exercises:Day 6](#-exercisesday-6)
+    - [Exercises: Level 1](#exercises-level-1)
+    - [Exercises: Level 2](#exercises-level-2)
+    - [Exercises: Level 3](#exercises-level-3)
 
 # 📔 Day 6
 
@@ -235,7 +236,7 @@ The above code stops if 3 found in the iteration process.
 
 ### continue
 
-We use the keyword *continue* to skip a certain iterations. 
+We use the keyword *continue* to skip a certain iterations.
 
 ```js
 for(let i = 0; i <= 5; i++){
@@ -254,7 +255,7 @@ for(let i = 0; i <= 5; i++){
 
 ### Exercises: Level 1
 
-  ```js
+```js
   const countries = [
     'Albania',
     'Bolivia',
@@ -280,7 +281,7 @@ for(let i = 0; i <= 5; i++){
   ]
 
   const mernStack = ['MongoDB', 'Express', 'React', 'Node']
-  ```
+```
 
 1. Iterate 0 to 10 using for loop, do the same using while and do while loop
 2. Iterate 10 to 0 using for loop, do the same using while and do while loop
@@ -296,7 +297,6 @@ for(let i = 0; i <= 5; i++){
        ######
        #######
    ```
-
 5. Use loop to print the following pattern:
 
    ```sh
@@ -312,7 +312,6 @@ for(let i = 0; i <= 5; i++){
    9 x 9 = 81
    10 x 10 = 100
    ```
-
 6. Using loop print the following pattern
 
    ```sh
@@ -329,7 +328,6 @@ for(let i = 0; i <= 5; i++){
     9    81    729
     10   100   1000
    ```
-
 7. Use for loop to iterate from 0 to 100 and print only even numbers
 8. Use for loop to iterate from 0 to 100 and print only odd numbers
 9. Use for loop to iterate from 0 to 100 and print only prime numbers
@@ -338,19 +336,16 @@ for(let i = 0; i <= 5; i++){
     ```sh
     The sum of all numbers from 0 to 100 is 5050.
     ```
-
 11. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
 
     ```sh
     The sum of all evens from 0 to 100 is 2550. And the sum of all odds from 0 to 100 is 2500.
     ```
-
 12. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
 
     ```sh
       [2550, 2500]
     ```
-
 13. Develop a small script which generate array of 5 random numbers
 14. Develop a small script which generate array of 5 random numbers and the numbers must be unique
 15. Develop a small script which generate a six characters random id:
@@ -363,99 +358,88 @@ for(let i = 0; i <= 5; i++){
 
 1. Develop a small script which generate any number of characters random id:
 
-    ```sh
-      fe3jo1gl124g
-    ```
+   ```sh
+     fe3jo1gl124g
+   ```
 
-    ```sh
-      xkqci4utda1lmbelpkm03rba
-    ```
+   ```sh
+     xkqci4utda1lmbelpkm03rba
+   ```
+2. Write a script which generates a random hexadecimal number.
 
-1. Write a script which generates a random hexadecimal number.
+   ```sh
+   '#ee33df'
+   ```
+3. Write a script which generates a random rgb color number.
 
-    ```sh
-    '#ee33df'
-    ```
+   ```sh
+   rgb(240,180,80)
+   ```
+4. Using the above countries array, create the following new array.
 
-1. Write a script which generates a random rgb color number.
+   ```sh
+   ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+   ```
+5. Using the above countries array, create an array for countries length'.
 
-    ```sh
-    rgb(240,180,80)
-    ```
+   ```sh
+   [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
+   ```
+6. Use the countries array to create the following array of arrays:
 
-1. Using the above countries array, create the following new array.
+   ```sh
+     [
+     ['Albania', 'ALB', 7],
+     ['Bolivia', 'BOL', 7],
+     ['Canada', 'CAN', 6],
+     ['Denmark', 'DEN', 7],
+     ['Ethiopia', 'ETH', 8],
+     ['Finland', 'FIN', 7],
+     ['Germany', 'GER', 7],
+     ['Hungary', 'HUN', 7],
+     ['Ireland', 'IRE', 7],
+     ['Iceland', 'ICE', 7],
+     ['Japan', 'JAP', 5],
+     ['Kenya', 'KEN', 5]
+   ]
+   ```
+7. In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
 
-    ```sh
-    ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
-    ```
+   ```sh
+   ['Finland','Ireland', 'Iceland']
+   ```
+8. In above countries array, check if there is  a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
 
-1. Using the above countries array, create an array for countries length'.
+   ```sh
+   ['Albania', 'Bolivia','Ethiopia']
+   ```
+9. Using the above countries array, find the country containing the biggest number of characters.
 
-    ```sh
-    [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
-    ```
-
-1. Use the countries array to create the following array of arrays:
-
-    ```sh
-      [
-      ['Albania', 'ALB', 7],
-      ['Bolivia', 'BOL', 7],
-      ['Canada', 'CAN', 6],
-      ['Denmark', 'DEN', 7],
-      ['Ethiopia', 'ETH', 8],
-      ['Finland', 'FIN', 7],
-      ['Germany', 'GER', 7],
-      ['Hungary', 'HUN', 7],
-      ['Ireland', 'IRE', 7],
-      ['Iceland', 'ICE', 7],
-      ['Japan', 'JAP', 5],
-      ['Kenya', 'KEN', 5]
-    ]
-    ```
-
-2. In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
-
-    ```sh
-    ['Finland','Ireland', 'Iceland']
-    ```
-
-3. In above countries array, check if there is  a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
-
-    ```sh
-    ['Albania', 'Bolivia','Ethiopia']
-    ```
-
-4. Using the above countries array, find the country containing the biggest number of characters.
-
-      ```sh
-      Ethiopia
-      ```
-
-5. Using the above countries array, find the country containing only 5 characters.
+   ```sh
+   Ethiopia
+   ```
+10. Using the above countries array, find the country containing only 5 characters.
 
     ```sh
     ['Japan', 'Kenya']
     ```
-
-6. Find the longest word in the webTechs array
-7. Use the webTechs array to create the following array of arrays:
+11. Find the longest word in the webTechs array
+12. Use the webTechs array to create the following array of arrays:
 
     ```sh
     [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
     ```
-
-8. An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
-9. Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
-10. This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
-11. Print all the elements of array as shown below.
+13. An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+14. Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+15. This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+16. Print all the elements of array as shown below.
 
     ```js
       const fullStack = [
         ['HTML', 'CSS', 'JS', 'React'],
         ['Node', 'Express', 'MongoDB']
       ]
-    ````
+    ```
 
     ```sh
       HTML
@@ -470,15 +454,15 @@ for(let i = 0; i <= 5; i++){
 ### Exercises: Level 3
 
 1. Copy countries array(Avoid mutation)
-1. Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
-1. Sort the webTechs array and mernStack array
-1. Extract all the countries contain the word 'land' from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and print it as array
-1. Find the country containing the hightest number of characters in the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js)
-1. Extract all the countries contain the word 'land' from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and print it as array
-1. Extract all the countries containing only four characters from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and print it as array
-1. Extract all the countries containing two or more words from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and print it as array
-1. Reverse the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and capitalize each country and stored it as an array
+2. Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+3. Sort the webTechs array and mernStack array
+4. Extract all the countries contain the word 'land' from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and print it as array
+5. Find the country containing the hightest number of characters in the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js)
+6. Extract all the countries contain the word 'land' from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and print it as array
+7. Extract all the countries containing only four characters from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and print it as array
+8. Extract all the countries containing two or more words from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and print it as array
+9. Reverse the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and capitalize each country and stored it as an array
 
 🎉 CONGRATULATIONS ! 🎉
 
-[<< Day 5](../05_Day_Arrays/05_day_arrays.md) | [Day 7 >>](../07_Day_Functions/07_day_functions.md)
+[&lt;&lt; Day 5](../05_Day_Arrays/05_day_arrays.md) | [Day 7 &gt;&gt;](../07_Day_Functions/07_day_functions.md)

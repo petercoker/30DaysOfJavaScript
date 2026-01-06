@@ -87,10 +87,20 @@ do {
 // ######
 // #######
 
-let n = 7;
-for (let i = 1; i <= n; i++) {
+let patternLimit = 7;
+let symbol = "#";
+for (let i = 1; i <= patternLimit; i++) {
   let str = "# ";
   console.log(str.repeat(i));
+}
+
+for (let row = 1; row <= patternLimit; row++) {
+  // for every row, run the col
+  for (let col = 1; col <= row; col++) {
+    console.log(symbol);
+  }
+  // Add a new line character after contents of each line
+  symbol += "\n";
 }
 
 // let rows = 7;

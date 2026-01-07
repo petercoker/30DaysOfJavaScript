@@ -94,14 +94,14 @@ for (let i = 1; i <= patternLimit; i++) {
   console.log(str.repeat(i));
 }
 
-for (let row = 1; row <= patternLimit; row++) {
-  // for every row, run the col
-  for (let col = 1; col <= row; col++) {
-    console.log(symbol);
-  }
-  // Add a new line character after contents of each line
-  symbol += "\n";
-}
+// for (let row = 1; row <= patternLimit; row++) {
+//   // for every row, run the col
+//   for (let col = 1; col <= row; col++) {
+//     console.log(symbol);
+//   }
+//   // Add a new line character after contents of each line
+//   symbol += "\n";
+// }
 
 // let rows = 7;
 
@@ -121,3 +121,27 @@ for (let row = 1; row <= patternLimit; row++) {
 //   pattern += "\n";
 // }
 // // console.log(pattern);
+
+// 5. Use loop to print the following pattern:
+// 0 x 0 = 0
+// 1 x 1 = 1
+// 2 x 2 = 4
+// 3 x 3 = 9
+// 4 x 4 = 16
+// 5 x 5 = 25
+// 6 x 6 = 36
+// 7 x 7 = 49
+// 8 x 8 = 64
+// 9 x 9 = 81
+// 10 x 10 = 100
+const countLimit = 10;
+for (let index = 0; index <= countLimit; index++) {
+  console.log(`${index} x ${index} = ${index * index}`);
+}
+
+// best practice
+const limit1 = 10;
+for (let i = 0; i <= limit1; i++) {
+  console.log(`${i} x ${i} = ${i ** 2}`);
+  // Fun fact: i ** 2 is a modern way to say "i squared"!
+}

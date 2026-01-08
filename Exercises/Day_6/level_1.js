@@ -145,3 +145,38 @@ for (let i = 0; i <= limit1; i++) {
   console.log(`${i} x ${i} = ${i ** 2}`);
   // Fun fact: i ** 2 is a modern way to say "i squared"!
 }
+
+//6. Using loop print the following pattern
+//  i    i^2   i^3
+//  0    0     0
+//  1    1     1
+//  2    4     8
+//  3    9     27
+//  4    16    64
+//  5    25    125
+//  6    36    216
+//  7    49    343
+//  8    64    512
+//  9    81    729
+//  10   100   1000
+
+const patternLimit6 = 10;
+console.log(`i i^2 i^3`);
+for (let i = 0; i <= patternLimit6; i++) {
+  console.log(`${i} ${i ** 2} ${i ** 3}`);
+}
+
+// best practice
+const patternLimit1 = 10;
+console.log(`i\ti^2\ti^3`); // Added \t for tabs
+
+for (let i = 0; i <= patternLimit1; i++) {
+  console.log(`${i}\t${i ** 2}\t${i ** 3}`); // Columns will now align
+}
+
+// option b
+const data = [];
+for (let i = 0; i <= 10; i++) {
+  data.push({ i: i, "i^2": i ** 2, "i^3": i ** 3 });
+}
+console.table(data);

@@ -189,10 +189,27 @@ for (let index = 0; index <= limit7; index++) {
   }
 }
 
+// more efficienct
+const limit2 = 100;
+
+// Notice the change: i += 2 instead of i++
+for (let i = 0; i <= limit2; i += 2) {
+  console.log(i);
+}
+
 // 8. Use for loop to iterate from 0 to 100 and print only odd numbers
 const limit8 = 100;
 for (let index = 0; index <= limit8; index++) {
   if (index % 2 !== 0) {
     console.log(index);
   }
+}
+
+// more efficenct
+// Just like with the even numbers, if you know you only want odds, you can skip the "check" entirely. By starting your loop at 1 and adding 2 each time,
+// you only ever land on odd numbers.
+const limit3 = 100;
+
+for (let i = 1; i <= limit3; i += 2) {
+  console.log(i);
 }

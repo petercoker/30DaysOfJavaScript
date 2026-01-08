@@ -180,3 +180,17 @@ for (let i = 0; i <= 10; i++) {
   data.push({ i: i, "i^2": i ** 2, "i^3": i ** 3 });
 }
 console.table(data);
+
+// 7. Use for loop to iterate from 0 to 100 and print only even numbers
+const limit7 = 100;
+for (let index = 0; index <= limit7; index++) {
+  console.log(index);
+}
+
+// 8. Use for loop to iterate from 0 to 100 and print only odd numbers
+const limit8 = 100;
+for (let index = 0; index <= limit8; index++) {
+  if (index % 2 === 0) {
+    console.log(index);
+  }
+}

@@ -231,3 +231,18 @@ for (let i = 2; i <= limit9; i++) {
     console.log(i);
   }
 }
+
+// 10. Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+
+let sum = 0;
+const limit10 = 100;
+for (let i = 0; i <= limit10; i++) {
+  sum += i;
+}
+
+console.log(sum);
+
+// While the loop is great for learning, a senior developer or mathematician would use a formula known as Gauss's Summation.
+const n = 100;
+const fastSum = (n * (n + 1)) / 2;
+console.log(fastSum); // 5050

@@ -213,3 +213,39 @@ const limit3 = 100;
 for (let i = 1; i <= limit3; i += 2) {
   console.log(i);
 }
+
+// 9. Use for loop to iterate from 0 to 100 and print only prime numbers
+// const limit9 = 100;
+
+// for (let i = 2; i <= limit9; i++) { // Start at 2 (0 and 1 are not prime)
+//   let isPrime = true;
+
+//   // Check if any number from 2 up to the square root of 'i' divides it
+//   for (let j = 2; j <= Math.sqrt(i); j++) {
+//     if (i % j === 0) {
+//       isPrime = false; // We found a divisor, so it's NOT prime
+//       break;           // Stop checking this number and move to the next 'i'
+//     }
+//   }
+
+//   if (isPrime) {
+//     console.log(i);
+//   }
+// }
+
+const limit9 = 100;
+// Start at 2 (0 and 1 are not prime) A prime number is any positive number that can only be divided by itself and the number 1.
+for (let i = 2; i <= limit9; i++) {
+  let isPrime = true;
+  // Check if any number from 2 up to the square root of 'i' divides it
+  for (let j = 2; j <= Math.sqrt(i); j++) {
+    if (i % j === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+
+  if (isPrime) {
+    console.log(i);
+  }
+}

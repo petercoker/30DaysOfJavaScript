@@ -246,3 +246,26 @@ console.log(sum);
 const n = 100;
 const fastSum = (n * (n + 1)) / 2;
 console.log(fastSum); // 5050
+
+// 11. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+// breaking down the tasks to small steps
+// use a loop to loop from 0 to 100
+// check each number if its even, which check all number is evens
+// check each number if its odd, which check all number is odds
+const limit_10 = 100;
+let sumOfAllEvenNum = 0;
+let sumOfAllOddNum = 0;
+
+// evens
+for (let i = 0; i <= limit_10; i += 2) {
+  sumOfAllEvenNum += i;
+}
+
+// odds
+for (let i = 1; i <= limit3; i += 2) {
+  sumOfAllOddNum += i;
+}
+
+console.log(`Sum of all even = ${sumOfAllEvenNum}`);
+console.log(`Sum of all odd = ${sumOfAllOddNum}`);
+console.log(`Sum of all even and odd = ${sumOfAllEvenNum + sumOfAllOddNum}`);

@@ -252,20 +252,36 @@ console.log(fastSum); // 5050
 // use a loop to loop from 0 to 100
 // check each number if its even, which check all number is evens
 // check each number if its odd, which check all number is odds
-const limit_10 = 100;
-let sumOfAllEvenNum = 0;
-let sumOfAllOddNum = 0;
+// const limit_10 = 100;
+// let sumOfAllEvenNum = 0;
+// let sumOfAllOddNum = 0;
 
-// evens
-for (let i = 0; i <= limit_10; i += 2) {
-  sumOfAllEvenNum += i;
+// // evens
+// for (let i = 0; i <= limit_10; i += 2) {
+//   sumOfAllEvenNum += i;
+// }
+
+// // odds
+// for (let i = 1; i <= limit3; i += 2) {
+//   sumOfAllOddNum += i;
+// }
+
+// console.log(`Sum of all even = ${sumOfAllEvenNum}`);
+// console.log(`Sum of all odd = ${sumOfAllOddNum}`);
+// console.log(`Sum of all even and odd = ${sumOfAllEvenNum + sumOfAllOddNum}`);
+
+//best practice
+const limit_11 = 100;
+let sumEvens = 0;
+let sumOdds = 0;
+
+for (let i = 0; i <= limit_11; i++) {
+  if (i % 2 === 0) {
+    sumEvens += i; // It's even, add to even bucket
+  } else {
+    sumOdds += i; // It's odd, add to odd bucket
+  }
 }
 
-// odds
-for (let i = 1; i <= limit3; i += 2) {
-  sumOfAllOddNum += i;
-}
-
-console.log(`Sum of all even = ${sumOfAllEvenNum}`);
-console.log(`Sum of all odd = ${sumOfAllOddNum}`);
-console.log(`Sum of all even and odd = ${sumOfAllEvenNum + sumOfAllOddNum}`);
+console.log(`The sum of all evens from 0 to ${limit} is ${sumEvens}.`);
+console.log(`The sum of all odds from 0 to ${limit} is ${sumOdds}.`);

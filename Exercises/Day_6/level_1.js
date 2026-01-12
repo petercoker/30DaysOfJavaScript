@@ -285,3 +285,21 @@ for (let i = 0; i <= limit_11; i++) {
 
 console.log(`The sum of all evens from 0 to ${limit} is ${sumEvens}.`);
 console.log(`The sum of all odds from 0 to ${limit} is ${sumOdds}.`);
+
+// 12. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+// Print sum of evens and sum of odds as array
+const limit_12 = 100;
+let evenSum = 0;
+let oddSum = 0;
+
+for (let i = 0; i <= limit_12; i++) {
+  if (i % 2 === 0) {
+    evenSum += i; // It's even, add to even bucket
+  } else {
+    oddSum += i; // It's odd, add to odd bucket
+  }
+}
+
+let sumEvenAndOdd = [evenSum, oddSum];
+
+console.log(sumEvenAndOdd);

@@ -303,3 +303,65 @@ for (let i = 0; i <= limit_12; i++) {
 let sumEvenAndOdd = [evenSum, oddSum];
 
 console.log(sumEvenAndOdd);
+
+// 13. Develop a small script which generate array of 5 random numbers
+
+// function generateRandomNumbers(length = 10, limit_13 = 100) {
+//   return Array.from(
+//     Array(length),
+//     () => Math.floor(Math.random() * limit_13) + 1
+//   );
+// }
+
+// console.log(generateRandomNumbers());
+
+// simple explaination
+// Step 1: Create a skeleton of 3 slots
+const skeleton = Array(3);
+
+// Step 2: Use Array.from to fill those slots with the word "Hello"
+const filledArray = Array.from(skeleton, () => "Hello");
+
+console.log(filledArray);
+// Output: ["Hello", "Hello", "Hello"]
+
+// best pratice
+function generateRandomNumbers(length = 5, max = 100) {
+  return Array.from(
+    { length }, // Pro Tip: You can use an object { length } instead of Array(length)
+    () => Math.floor(Math.random() * max) + 1
+  );
+}
+
+console.log(generateRandomNumbers());
+
+// 14. Develop a small script which generate array of 5 random numbers and the numbers must be unique
+
+function generateUniqueRandomNumbers(count, min, max) {
+  // 1: Create a `Set` object
+  let uniqueNumbers = new Set();
+  while (uniqueNumbers.size < count) {
+    // 2: Generate each random number
+    uniqueNumbers.add(Math.floor(Math.random() * (max - min + 1)) + min);
+  }
+  // 3: Immediately insert them numbers into the Set...
+  return Array.from(uniqueNumbers);
+}
+// ...set how many numbers to generate from a given range
+
+console.log(generateUniqueRandomNumbers(5, 0, 100));
+
+
+// The Professional Way
+function getUniqueNumbers(count, max) {
+  const unique = new Set();
+  
+  while (unique.size < count) {
+    unique.add(Math.floor(Math.random() * max) + 1);
+  }
+  
+  return [...unique]; // Turn the Set back into an Array
+}
+
+
+console.log(generateUniqueRandomNumbers(5, 100));

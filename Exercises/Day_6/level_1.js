@@ -351,21 +351,21 @@ function generateUniqueRandomNumbers(count, min, max) {
 
 console.log(generateUniqueRandomNumbers(5, 0, 100));
 
-
 // The Professional Way
 function getUniqueNumbers(count, max) {
   const unique = new Set();
-  
+
   while (unique.size < count) {
     unique.add(Math.floor(Math.random() * max) + 1);
   }
-  
+
   return [...unique]; // Turn the Set back into an Array
 }
 
-
 console.log(generateUniqueRandomNumbers(5, 100));
-
 
 // 15. Develop a small script which generate a six characters random id:
 // 5j2khz
+
+const characterLimit = 6;
+for (let i = 0; index < characterLimit.length; i++) {}

@@ -365,3 +365,7 @@ function getUniqueNumbers(count, max) {
 
 
 console.log(generateUniqueRandomNumbers(5, 100));
+
+
+// 15. Develop a small script which generate a six characters random id:
+// 5j2khz

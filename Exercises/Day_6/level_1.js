@@ -367,5 +367,19 @@ console.log(generateUniqueRandomNumbers(5, 100));
 // 15. Develop a small script which generate a six characters random id:
 // 5j2khz
 
-const characterLimit = 6;
-for (let i = 0; index < characterLimit.length; i++) {}
+function generateId(length = 6) {
+  const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+
+  for (let i = 0; i < length; i++) {
+    // 1. Pick a random position (index) in the characters string
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    
+    // 2. Grab the character at that position and add it to our ID
+    result += characters.charAt(randomIndex);
+  }
+
+  return result;
+}
+
+console.log(generateId());

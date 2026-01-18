@@ -47,11 +47,73 @@ const randomHex = () => {
 console.log(randomHex()); // Example output: "3f5a1b"
 
 // 3. Write a script which generates a random rgb color number.
+// function getRandomRGBColor() {
+//   let r = Math.floor(Math.random() * 256); // Random between 0-255
+//   let g = Math.floor(Math.random() * 256); // Random between 0-255
+//   let b = Math.floor(Math.random() * 256); // Random between 0-255
+//   return `rgb(${r},${g},${b})`;
+// }
+
+// console.log(getRandomRGBColor());
+
+// best practice
+const rgbColorLimit = 256;
+const random255 = (rgbColorLimit = 256) =>
+  Math.floor(Math.random() * rgbColorLimit);
+
 function getRandomRGBColor() {
-  let r = Math.floor(Math.random() * 256); // Random between 0-255
-  let g = Math.floor(Math.random() * 256); // Random between 0-255
-  let b = Math.floor(Math.random() * 256); // Random between 0-255
-  return `rgb(${r},${g},${b})`;
+  return `rgb(${random255()}, ${random255()}, ${random255()})`;
 }
 
 console.log(getRandomRGBColor());
+
+// one linear
+const randomRGB = () =>
+  `rgb(${Array.from({ length: 3 }, () => Math.floor(Math.random() * 256)).join(
+    ", "
+  )})`;
+
+console.log(randomRGB());
+
+// 4. Using the above countries array, create the following new array.
+// ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+
+// wrong
+const countries = [
+  "ALBANIA",
+  "BOLIVIA",
+  "CANADA",
+  "DENMARK",
+  "ETHIOPIA",
+  "FINLAND",
+  "GERMANY",
+  "HUNGARY",
+  "IRELAND",
+  "JAPAN",
+  "KENYA",
+];
+
+const character = "K";
+
+function generateNewCountries(countries, character) {
+  countries.sort();
+
+  const filteredCountriesIndex = countries.findIndex((item) =>
+    item.startsWith(character)
+  );
+
+  const result =
+    filteredCountriesIndex === -1
+      ? countries
+      : countries.slice(0, filteredCountriesIndex);
+
+  return result;
+}
+
+// Examples from your request:
+console.log(generateNewCountries(countries, "k"));
+
+// The "Best Practice" way:
+const upperCaseCountries = countries.map((country) => country.toUpperCase());
+
+console.log(upperCaseCountries);

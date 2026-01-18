@@ -45,3 +45,13 @@ const randomHex = () => {
 };
 
 console.log(randomHex()); // Example output: "3f5a1b"
+
+// 3. Write a script which generates a random rgb color number.
+function getRandomRGBColor() {
+  let r = Math.floor(Math.random() * 256); // Random between 0-255
+  let g = Math.floor(Math.random() * 256); // Random between 0-255
+  let b = Math.floor(Math.random() * 256); // Random between 0-255
+  return `rgb(${r},${g},${b})`;
+}
+
+console.log(getRandomRGBColor());

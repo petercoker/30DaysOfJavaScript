@@ -117,3 +117,36 @@ console.log(generateNewCountries(countries, "k"));
 const upperCaseCountries = countries.map((country) => country.toUpperCase());
 
 console.log(upperCaseCountries);
+
+// 5. Using the above countries array, create an array for countries length'.
+const countriesNameLength = countries.map((country) => country.length);
+console.log(countriesNameLength);
+
+// 6. Use the countries array to create the following array of arrays:
+//
+//   [
+// ['Albania', 'ALB', 7],
+// ['Bolivia', 'BOL', 7],
+// ['Canada', 'CAN', 6],
+// ['Denmark', 'DEN', 7],
+// ['Ethiopia', 'ETH', 8],
+// ['Finland', 'FIN', 7],
+// ['Germany', 'GER', 7],
+// ['Hungary', 'HUN', 7],
+// ['Ireland', 'IRE', 7],
+// ['Iceland', 'ICE', 7],
+// ['Japan', 'JAP', 5],
+// ['Kenya', 'KEN', 5]
+//   ]
+
+let result = [];
+for (let element = 0; element < countries.length; element++) {
+  result.push([
+    countries[element].charAt(0).toUpperCase() +
+      countries[element].slice(1).toLowerCase(), //Country name styled
+    countries[element].slice(0, 3), // Only first 3 character of Country name,
+    countries[element].length, // Country name length
+  ]);
+}
+
+console.log(result);

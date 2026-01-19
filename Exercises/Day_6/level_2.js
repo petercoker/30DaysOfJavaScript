@@ -150,3 +150,30 @@ for (let element = 0; element < countries.length; element++) {
 }
 
 console.log(result);
+
+// more read about
+for (let country of countries) {
+  result.push([
+    country.charAt(0).toUpperCase() + country.slice(1).toLowerCase(), //Country name styled
+    country.slice(0, 3), // Only first 3 character of Country name,
+    country.length, // Country name length
+  ]);
+}
+
+console.log(result);
+
+// best practice
+const ex6 = countries.map((country) => {
+  return [
+    // 1. Title Case e.g. Nigeria
+    country.charAt(0).toUpperCase() + country.slice(1).toLowerCase(),
+
+    // 2. Only first 3 character of Country name e.g. NIG
+    country.slice(0, 3).toUpperCase(),
+
+    // 3, Country name length
+    country.length,
+  ];
+});
+
+console.log(ex6);

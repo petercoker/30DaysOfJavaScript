@@ -177,3 +177,54 @@ const ex6 = countries.map((country) => {
 });
 
 console.log(ex6);
+
+// 7. In above countries array, check if there is a country or countries containing the word 'land'.
+// If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+const updatedCountries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Iceland",
+  "Japan",
+  "Kenya",
+];
+const countriesContaing = "land";
+const ex7 = updatedCountries.filter((country) =>
+  country.toLowerCase().includes(countriesContaing.toLowerCase())
+);
+console.log(ex7);
+
+// best practice
+const updatedCountries1 = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Iceland",
+  "Japan",
+  "Kenya",
+];
+const searchTerm = "land";
+
+// 1. Filter the array
+const landCountries = updatedCountries1.filter((country) =>
+  country.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
+// 2. Check the result and print accordingly
+if (landCountries.length > 0) {
+  console.log(landCountries);
+} else {
+  console.log("All these countries are without land");
+}

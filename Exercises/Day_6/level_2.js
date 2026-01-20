@@ -228,3 +228,39 @@ if (landCountries.length > 0) {
 } else {
   console.log("All these countries are without land");
 }
+
+// 8. In above countries array,
+// check if there is  a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ia',
+// print 'These are countries ends without ia'.
+const searchTerm1 = "ia";
+const iaCountries = updatedCountries1.filter((country) =>
+  country.toLowerCase().endsWith(searchTerm1.toLowerCase())
+);
+
+if (iaCountries.length > 0) {
+  console.log(iaCountries);
+} else {
+  console.log("These are countries ends without ia");
+}
+
+// alternative output
+console.log(
+  iaCountries.length > 0 ? iaCountries : "These are countries ends without ia"
+);
+
+// best practice
+// If you were building a real application,
+// you might find yourself checking for different endings
+// (like "land", "ia", or "stan"). Instead of writing a new filter every time,
+// you can create a reusable function:
+
+const filterByEnding = (arr, suffix) => {
+  const result = arr.filter((item) =>
+    item.toLowerCase().endsWith(suffix.toLowerCase())
+  );
+
+  return result.length > 0 ? result : `No countries end with ${suffix}`;
+};
+
+console.log(filterByEnding(updatedCountries1, "ia"));
+console.log(filterByEnding(updatedCountries1, "stan"));

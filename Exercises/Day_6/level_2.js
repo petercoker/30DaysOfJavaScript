@@ -264,3 +264,36 @@ const filterByEnding = (arr, suffix) => {
 
 console.log(filterByEnding(updatedCountries1, "ia"));
 console.log(filterByEnding(updatedCountries1, "stan"));
+
+// 9. Using the above countries array, 
+// find the country containing the biggest number of characters.
+// const searchTerm1 = "ia";
+// const iaCountries = updatedCountries1.filter((country) =>
+//   country.length Math.max
+// );
+
+// const countriesLength = countries.map((country) => country.length);
+
+// Math.max(countriesLength)
+
+
+// best practice
+
+const updatedCountries2 = ["Albania", "Bolivia", "Canada", "Denmark", "Ethiopia", "Finland", "Germany", "Hungary", "Ireland", "Iceland", "Japan", "Kenya"];
+
+const longestCountry = updatedCountries2.reduce((longest, current) => {
+  return current.length > longest.length ? current : longest;
+}, "");
+
+console.log(longestCountry); // Output: "Ethiopia"
+
+
+// fix 
+// 1. Get the max length (Use ... to spread the array)
+const lengths = updatedCountries.map(c => c.length);
+const maxLength = Math.max(...lengths); 
+
+// 2. Find the country that has that length
+const winner = updatedCountries.find(c => c.length === maxLength);
+
+console.log(winner); // "Ethiopia"

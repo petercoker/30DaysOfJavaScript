@@ -265,7 +265,7 @@ const filterByEnding = (arr, suffix) => {
 console.log(filterByEnding(updatedCountries1, "ia"));
 console.log(filterByEnding(updatedCountries1, "stan"));
 
-// 9. Using the above countries array, 
+// 9. Using the above countries array,
 // find the country containing the biggest number of characters.
 // const searchTerm1 = "ia";
 // const iaCountries = updatedCountries1.filter((country) =>
@@ -276,10 +276,22 @@ console.log(filterByEnding(updatedCountries1, "stan"));
 
 // Math.max(countriesLength)
 
-
 // best practice
 
-const updatedCountries2 = ["Albania", "Bolivia", "Canada", "Denmark", "Ethiopia", "Finland", "Germany", "Hungary", "Ireland", "Iceland", "Japan", "Kenya"];
+const updatedCountries2 = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Iceland",
+  "Japan",
+  "Kenya",
+];
 
 const longestCountry = updatedCountries2.reduce((longest, current) => {
   return current.length > longest.length ? current : longest;
@@ -287,13 +299,25 @@ const longestCountry = updatedCountries2.reduce((longest, current) => {
 
 console.log(longestCountry); // Output: "Ethiopia"
 
-
-// fix 
+// fix
 // 1. Get the max length (Use ... to spread the array)
-const lengths = updatedCountries.map(c => c.length);
-const maxLength = Math.max(...lengths); 
+const lengths = updatedCountries.map((c) => c.length);
+const maxLength = Math.max(...lengths);
 
 // 2. Find the country that has that length
-const winner = updatedCountries.find(c => c.length === maxLength);
+const winner = updatedCountries.find((c) => c.length === maxLength);
 
 console.log(winner); // "Ethiopia"
+
+// 10. Using the above countries array, find the country containing only 5 characters.
+
+const ex10 = updatedCountries.filter((country) => country.length === 5);
+console.log(ex10);
+
+// best practice
+const firstCountryWith5Chars = countries.find(
+  (country) => country.length === 5
+);
+
+console.log(countriesWith5Chars); // ["Japan", "Kenya"]
+console.log(firstCountryWith5Chars); // "Japan"

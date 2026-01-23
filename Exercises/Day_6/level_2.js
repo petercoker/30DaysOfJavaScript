@@ -1,6 +1,7 @@
 // 1. Develop a small script which generate any number of characters random
 // id: fe3jo1gl124g
 // id: xkqci4utda1lmbelpkm03rba
+import { webTechs } from "../Day_5/webTechs.js";
 
 function generateRandomId(length) {
   const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -312,12 +313,21 @@ console.log(winner); // "Ethiopia"
 // 10. Using the above countries array, find the country containing only 5 characters.
 
 const ex10 = updatedCountries.filter((country) => country.length === 5);
-console.log(ex10);
 
 // best practice
 const firstCountryWith5Chars = countries.find(
   (country) => country.length === 5
 );
 
-console.log(countriesWith5Chars); // ["Japan", "Kenya"]
+console.log(ex10); // ["Japan", "Kenya"]
 console.log(firstCountryWith5Chars); // "Japan"
+
+// 11. Find the longest word in the webTechs array
+
+// 1. Calculate the max length first
+const maxWordLength = Math.max(...webTechs.map((tech) => tech.length));
+
+// 2. Find the winner
+const ex11 = webTechs.find((tech) => tech.length === maxWordLength);
+
+console.log(ex11);

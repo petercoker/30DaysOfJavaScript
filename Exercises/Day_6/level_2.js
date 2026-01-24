@@ -331,3 +331,29 @@ const maxWordLength = Math.max(...webTechs.map((tech) => tech.length));
 const ex11 = webTechs.find((tech) => tech.length === maxWordLength);
 
 console.log(ex11);
+
+// 12. Use the webTechs array to create the following array of arrays:
+
+// [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
+
+const ex12 = webTechs.map((tech, index) => {
+  // Tech Name and Tech Name Character length
+  return index <= 8 ? [tech, tech.length] : [];
+});
+
+console.log(ex12);
+
+// best practice
+const techData = webTechs.map((tech) => [tech, tech.length]);
+
+console.log(techData);
+// Result: [["HTML", 4], ["CSS", 3], ["JavaScript", 10], ...]
+
+const ex12Tip = webTechs
+  .filter((tech) => ["HTML", "CSS", "React", "Node.js"].includes(tech)) // Pick what you want
+  .map((tech) => {
+    const cleanName = tech === "Node.js" ? "Node" : tech; // Rename if needed
+    return [cleanName, cleanName.length];
+  });
+
+console.log(ex12Tip);

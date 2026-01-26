@@ -71,7 +71,7 @@ console.log(getRandomRGBColor());
 // one linear
 const randomRGB = () =>
   `rgb(${Array.from({ length: 3 }, () => Math.floor(Math.random() * 256)).join(
-    ", "
+    ", ",
   )})`;
 
 console.log(randomRGB());
@@ -100,7 +100,7 @@ function generateNewCountries(countries, character) {
   countries.sort();
 
   const filteredCountriesIndex = countries.findIndex((item) =>
-    item.startsWith(character)
+    item.startsWith(character),
   );
 
   const result =
@@ -197,7 +197,7 @@ const updatedCountries = [
 ];
 const countriesContaing = "land";
 const ex7 = updatedCountries.filter((country) =>
-  country.toLowerCase().includes(countriesContaing.toLowerCase())
+  country.toLowerCase().includes(countriesContaing.toLowerCase()),
 );
 console.log(ex7);
 
@@ -220,7 +220,7 @@ const searchTerm = "land";
 
 // 1. Filter the array
 const landCountries = updatedCountries1.filter((country) =>
-  country.toLowerCase().includes(searchTerm.toLowerCase())
+  country.toLowerCase().includes(searchTerm.toLowerCase()),
 );
 
 // 2. Check the result and print accordingly
@@ -235,7 +235,7 @@ if (landCountries.length > 0) {
 // print 'These are countries ends without ia'.
 const searchTerm1 = "ia";
 const iaCountries = updatedCountries1.filter((country) =>
-  country.toLowerCase().endsWith(searchTerm1.toLowerCase())
+  country.toLowerCase().endsWith(searchTerm1.toLowerCase()),
 );
 
 if (iaCountries.length > 0) {
@@ -246,7 +246,7 @@ if (iaCountries.length > 0) {
 
 // alternative output
 console.log(
-  iaCountries.length > 0 ? iaCountries : "These are countries ends without ia"
+  iaCountries.length > 0 ? iaCountries : "These are countries ends without ia",
 );
 
 // best practice
@@ -257,7 +257,7 @@ console.log(
 
 const filterByEnding = (arr, suffix) => {
   const result = arr.filter((item) =>
-    item.toLowerCase().endsWith(suffix.toLowerCase())
+    item.toLowerCase().endsWith(suffix.toLowerCase()),
   );
 
   return result.length > 0 ? result : `No countries end with ${suffix}`;
@@ -316,7 +316,7 @@ const ex10 = updatedCountries.filter((country) => country.length === 5);
 
 // best practice
 const firstCountryWith5Chars = countries.find(
-  (country) => country.length === 5
+  (country) => country.length === 5,
 );
 
 console.log(ex10); // ["Japan", "Kenya"]
@@ -358,13 +358,33 @@ const ex12Tip = webTechs
 
 console.log(ex12Tip);
 
-
-const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
+const mernStack = ["MongoDB", "Express", "React", "Node"];
 
 // 13. An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
 
 // 1. Map: take each string and grab only the first character
 // 2. Join: turn the resulting array into a single string
-const acronym = mernStack.map(tech => tech[0]).join('');
+const acronym = mernStack.map((tech) => tech[0]).join("");
 
 console.log(acronym); // Output: "MERN"
+
+//14. Iterate through the array, using a for loop or for of loop and print out the items.
+const tech = [
+  "HTML",
+  "CSS",
+  "JS",
+  "React",
+  "Redux",
+  "Node",
+  "Express",
+  "MongoDB",
+];
+
+for (let i = 0; i < tech.length; i++) {
+  console.log(tech[i]);
+}
+
+
+for (const element of tech) {
+  console.log(element);
+}

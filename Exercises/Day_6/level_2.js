@@ -384,7 +384,26 @@ for (let i = 0; i < tech.length; i++) {
   console.log(tech[i]);
 }
 
-
 for (const element of tech) {
   console.log(element);
 }
+
+// 15. This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+// const fruit = ["banana", "orange", "mango", "lemon"];
+// let reverseFruit = [];
+// for (let i = fruit.length - 1; i >= 0; i--) {
+//   const element = fruit[i];
+//   reverseFruit.push(element);
+// }
+
+// console.log(reverseFruit);
+
+// best practice 
+const fruit = ["banana", "orange", "mango", "lemon"];
+let reverseFruit = [];
+
+for (const item of fruit) {
+  reverseFruit.unshift(item); // Adds the item to the START of the new array
+}
+
+console.log(reverseFruit);

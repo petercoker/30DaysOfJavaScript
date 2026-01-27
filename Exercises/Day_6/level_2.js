@@ -398,7 +398,7 @@ for (const element of tech) {
 
 // console.log(reverseFruit);
 
-// best practice 
+// best practice
 const fruit = ["banana", "orange", "mango", "lemon"];
 let reverseFruit = [];
 
@@ -407,3 +407,22 @@ for (const item of fruit) {
 }
 
 console.log(reverseFruit);
+
+// 16. Print all the elements of array as shown below.
+
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+
+let fullStackFlat = fullStack.flat();
+
+for (const item of fullStackFlat) {
+  console.log(item);
+}
+
+// senior alter
+fullStack.flat().forEach((tech) => console.log(tech));
+
+// more better
+fullStackFlat = fullStack.flat(Infinity);

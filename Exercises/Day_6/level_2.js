@@ -426,3 +426,6 @@ fullStack.flat().forEach((tech) => console.log(tech));
 
 // more better
 fullStackFlat = fullStack.flat(Infinity);
+
+
+

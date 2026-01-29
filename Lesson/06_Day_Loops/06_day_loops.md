@@ -7,10 +7,10 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  `<sub>`Author:
-  `<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">`Asabeneh Yetayeh`</a><br>`
-  `<small>` January, 2020`</small>`
-  `</sub>`
+`<sub>`Author:
+`<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">`Asabeneh Yetayeh `</a><br>`
+`<small>` January, 2020 `</small>`
+`</sub>`
 
 </div>
 
@@ -49,24 +49,24 @@ for(initialization, condition, increment/decrement){
 ```
 
 ```js
-for(let i = 0; i <= 5; i++){
-  console.log(i)
+for (let i = 0; i <= 5; i++) {
+  console.log(i);
 }
 
 // 0 1 2 3 4 5
 ```
 
 ```js
-for(let i = 5; i >= 0; i--){
-  console.log(i)
+for (let i = 5; i >= 0; i--) {
+  console.log(i);
 }
 
 // 5 4 3 2 1 0
 ```
 
 ```js
-for(let i = 0; i <= 5; i++){
-  console.log(`${i} * ${i} = ${i * i}`)
+for (let i = 0; i <= 5; i++) {
+  console.log(`${i} * ${i} = ${i * i}`);
 }
 ```
 
@@ -80,10 +80,10 @@ for(let i = 0; i <= 5; i++){
 ```
 
 ```js
-const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
-const newArr = []
-for(let i = 0; i < countries.length; i++){
-  newArr.push(countries[i].toUpperCase())
+const countries = ["Finland", "Sweden", "Denmark", "Norway", "Iceland"];
+const newArr = [];
+for (let i = 0; i < countries.length; i++) {
+  newArr.push(countries[i].toUpperCase());
 }
 
 // ["FINLAND", "SWEDEN", "DENMARK", "NORWAY", "ICELAND"]
@@ -92,47 +92,45 @@ for(let i = 0; i < countries.length; i++){
 Adding all elements in the array
 
 ```js
-const numbers = [1, 2, 3, 4, 5]
-let sum = 0
-for(let i = 0; i < numbers.length; i++){
-  sum  = sum + numbers[i]  // can be shorten, sum += numbers[i]
-
+const numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+  sum = sum + numbers[i]; // can be shorten, sum += numbers[i]
 }
 
-console.log(sum)  // 15
+console.log(sum); // 15
 ```
 
 Creating a new array based on the existing array
 
 ```js
-const numbers = [1, 2, 3, 4, 5]
-const newArr = []
-let sum = 0
-for(let i = 0; i < numbers.length; i++){
-  newArr.push( numbers[i] ** 2)
-
+const numbers = [1, 2, 3, 4, 5];
+const newArr = [];
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+  newArr.push(numbers[i] ** 2);
 }
 
-console.log(newArr)  // [1, 4, 9, 16, 25]
+console.log(newArr); // [1, 4, 9, 16, 25]
 ```
 
 ```js
-const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
-const newArr = []
-for(let i = 0; i < countries.length; i++){
-  newArr.push(countries[i].toUpperCase())
+const countries = ["Finland", "Sweden", "Norway", "Denmark", "Iceland"];
+const newArr = [];
+for (let i = 0; i < countries.length; i++) {
+  newArr.push(countries[i].toUpperCase());
 }
 
-console.log(newArr)  // ["FINLAND", "SWEDEN", "NORWAY", "DENMARK", "ICELAND"]
+console.log(newArr); // ["FINLAND", "SWEDEN", "NORWAY", "DENMARK", "ICELAND"]
 ```
 
 ### while loop
 
 ```js
-let i = 0
+let i = 0;
 while (i <= 5) {
-  console.log(i)
-  i++
+  console.log(i);
+  i++;
 }
 
 // 0 1 2 3 4 5
@@ -141,11 +139,11 @@ while (i <= 5) {
 ### do while loop
 
 ```js
-let i = 0
+let i = 0;
 do {
-  console.log(i)
-  i++
-} while (i <= 5)
+  console.log(i);
+  i++;
+} while (i <= 5);
 
 // 0 1 2 3 4 5
 ```
@@ -161,60 +159,58 @@ for (const element of arr) {
 ```
 
 ```js
-
-const numbers = [1, 2, 3, 4, 5]
+const numbers = [1, 2, 3, 4, 5];
 
 for (const num of numbers) {
-  console.log(num)
+  console.log(num);
 }
 
 // 1 2 3 4 5
 
 for (const num of numbers) {
-  console.log(num * num)
+  console.log(num * num);
 }
 
 // 1 4 9 16 25
 
 // adding all the numbers in the array
-let sum = 0
+let sum = 0;
 for (const num of numbers) {
-  sum = sum + num  
-	// can be also shorten like this, sum += num
+  sum = sum + num;
+  // can be also shorten like this, sum += num
   // after this we will use the shorter synthax(+=, -=, *=, /= etc)
 }
-console.log(sum) // 15
+console.log(sum); // 15
 
 const webTechs = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'React',
-  'Redux',
-  'Node',
-  'MongoDB'
-]
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
 
 for (const tech of webTechs) {
-  console.log(tech.toUpperCase())
+  console.log(tech.toUpperCase());
 }
 
 // HTML CSS JAVASCRIPT REACT NODE MONGODB
 
 for (const tech of webTechs) {
-  console.log(tech[0]) // get only the first letter of each element,  H C J R N M
+  console.log(tech[0]); // get only the first letter of each element,  H C J R N M
 }
-
 ```
 
 ```js
-const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
-const newArr = []
-for(const country of countries){
-  newArr.push(country.toUpperCase())
+const countries = ["Finland", "Sweden", "Norway", "Denmark", "Iceland"];
+const newArr = [];
+for (const country of countries) {
+  newArr.push(country.toUpperCase());
 }
 
-console.log(newArr)  // ["FINLAND", "SWEDEN", "NORWAY", "DENMARK", "ICELAND"]
+console.log(newArr); // ["FINLAND", "SWEDEN", "NORWAY", "DENMARK", "ICELAND"]
 ```
 
 ### break
@@ -222,11 +218,11 @@ console.log(newArr)  // ["FINLAND", "SWEDEN", "NORWAY", "DENMARK", "ICELAND"]
 Break is used to interrupt a loop.
 
 ```js
-for(let i = 0; i <= 5; i++){
-  if(i == 3){
-    break
+for (let i = 0; i <= 5; i++) {
+  if (i == 3) {
+    break;
   }
-  console.log(i)
+  console.log(i);
 }
 
 // 0 1 2
@@ -236,14 +232,14 @@ The above code stops if 3 found in the iteration process.
 
 ### continue
 
-We use the keyword *continue* to skip a certain iterations.
+We use the keyword _continue_ to skip a certain iterations.
 
 ```js
-for(let i = 0; i <= 5; i++){
-  if(i == 3){
-    continue
+for (let i = 0; i <= 5; i++) {
+  if (i == 3) {
+    continue;
   }
-  console.log(i)
+  console.log(i);
 }
 
 // 0 1 2 4 5
@@ -256,31 +252,31 @@ for(let i = 0; i <= 5; i++){
 ### Exercises: Level 1
 
 ```js
-  const countries = [
-    'Albania',
-    'Bolivia',
-    'Canada',
-    'Denmark',
-    'Ethiopia',
-    'Finland',
-    'Germany',
-    'Hungary',
-    'Ireland',
-    'Japan',
-    'Kenya'
-  ]
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
 
-  const webTechs = [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'React',
-    'Redux',
-    'Node',
-    'MongoDB'
-  ]
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
 
-  const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+const mernStack = ["MongoDB", "Express", "React", "Node"];
 ```
 
 1. Iterate 0 to 10 using for loop, do the same using while and do while loop
@@ -297,6 +293,7 @@ for(let i = 0; i <= 5; i++){
        ######
        #######
    ```
+
 5. Use loop to print the following pattern:
 
    ```sh
@@ -312,6 +309,7 @@ for(let i = 0; i <= 5; i++){
    9 x 9 = 81
    10 x 10 = 100
    ```
+
 6. Using loop print the following pattern
 
    ```sh
@@ -328,6 +326,7 @@ for(let i = 0; i <= 5; i++){
     9    81    729
     10   100   1000
    ```
+
 7. Use for loop to iterate from 0 to 100 and print only even numbers
 8. Use for loop to iterate from 0 to 100 and print only odd numbers
 9. Use for loop to iterate from 0 to 100 and print only prime numbers
@@ -336,16 +335,19 @@ for(let i = 0; i <= 5; i++){
     ```sh
     The sum of all numbers from 0 to 100 is 5050.
     ```
+
 11. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
 
     ```sh
     The sum of all evens from 0 to 100 is 2550. And the sum of all odds from 0 to 100 is 2500.
     ```
+
 12. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
 
     ```sh
       [2550, 2500]
     ```
+
 13. Develop a small script which generate array of 5 random numbers
 14. Develop a small script which generate array of 5 random numbers and the numbers must be unique
 15. Develop a small script which generate a six characters random id:
@@ -365,26 +367,31 @@ for(let i = 0; i <= 5; i++){
    ```sh
      xkqci4utda1lmbelpkm03rba
    ```
+
 2. Write a script which generates a random hexadecimal number.
 
    ```sh
    '#ee33df'
    ```
+
 3. Write a script which generates a random rgb color number.
 
    ```sh
    rgb(240,180,80)
    ```
+
 4. Using the above countries array, create the following new array.
 
    ```sh
    ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
    ```
+
 5. Using the above countries array, create an array for countries length'.
 
    ```sh
    [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
    ```
+
 6. Use the countries array to create the following array of arrays:
 
    ```sh
@@ -403,42 +410,48 @@ for(let i = 0; i <= 5; i++){
      ['Kenya', 'KEN', 5]
    ]
    ```
+
 7. In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
 
    ```sh
    ['Finland','Ireland', 'Iceland']
    ```
-8. In above countries array, check if there is  a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
+
+8. In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
 
    ```sh
    ['Albania', 'Bolivia','Ethiopia']
    ```
+
 9. Using the above countries array, find the country containing the biggest number of characters.
 
    ```sh
    Ethiopia
    ```
+
 10. Using the above countries array, find the country containing only 5 characters.
 
     ```sh
     ['Japan', 'Kenya']
     ```
+
 11. Find the longest word in the webTechs array
 12. Use the webTechs array to create the following array of arrays:
 
     ```sh
     [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
     ```
+
 13. An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
 14. Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
 15. This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
 16. Print all the elements of array as shown below.
 
     ```js
-      const fullStack = [
-        ['HTML', 'CSS', 'JS', 'React'],
-        ['Node', 'Express', 'MongoDB']
-      ]
+    const fullStack = [
+      ["HTML", "CSS", "JS", "React"],
+      ["Node", "Express", "MongoDB"],
+    ];
     ```
 
     ```sh

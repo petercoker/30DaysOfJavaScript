@@ -33,8 +33,34 @@ const updatedCountries = [
 
 // best practice
 // This does NOT change updatedCountries; it returns a new sorted array.
-const sortedCountries1 = updatedCountries.toSorted((a, b) =>
-  a.localeCompare(b),
-);
+const sortedCountries = updatedCountries.toSorted((a, b) => a.localeCompare(b));
 
 console.log(sortedCountries);
+
+// 3. Sort the webTechs array and mernStack array
+
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+
+// const sortedWebTechs = webTechs.toSorted((a, b) => a.localeCompare(b));
+
+// const sortedMernStack = mernStack.toSorted((a, b) => a.localeCompare(b));
+
+// console.log(sortedWebTechs);
+// console.log(sortedMernStack);
+
+// best pracitce
+
+const alphabetize = (arr) => arr.toSorted((a, b) => a.localeCompare(b));
+
+const sortedWebTechs = alphabetize(webTechs);
+const sortedMernStack = alphabetize(mernStack);

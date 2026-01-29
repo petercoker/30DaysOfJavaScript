@@ -25,13 +25,16 @@ const updatedCountries = [
 // console.log(sortedCountries);
 
 // 1. Copy and Sort in one go (Modern Best Practice)
-const sortedCountries = [...updatedCountries].sort((a, b) =>
-  a.localeCompare(b),
-);
+// const sortedCountries = [...updatedCountries].sort((a, b) =>
+//   a.localeCompare(b),
+// );
 
-console.log(sortedCountries);
+// console.log(sortedCountries);
 
+// best practice
 // This does NOT change updatedCountries; it returns a new sorted array.
 const sortedCountries1 = updatedCountries.toSorted((a, b) =>
   a.localeCompare(b),
 );
+
+console.log(sortedCountries);

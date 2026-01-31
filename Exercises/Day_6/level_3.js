@@ -1,4 +1,4 @@
-// import { updatedCountries } from "../Day_6/"
+// import { updatedCountries } from "../Day_6/";
 const updatedCountries = [
   "Albania",
   "Bolivia",
@@ -99,3 +99,32 @@ const winner2 = updatedCountries2.reduce((longest, current) => {
 }, "");
 
 console.log(winner2); // "Ethiopia"
+
+// 6. Extract all the countries contain the word 'land' from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js) and print it as array
+
+// const filterByEnding = (arr, suffix) => {
+//   const result = arr.filter((item) =>
+//     item.toLowerCase().endsWith(suffix.toLowerCase()),
+//   );
+
+//   return result.length > 0 ? result : `No countries end with ${suffix}`;
+// };
+
+// console.log(filterByEnding(updatedCountries, "land"));
+
+// best practice
+/**
+ * Best Practice: Use a generic name like 'filterByText'
+ * and .includes() to satisfy the "contains" requirement.
+ */
+const filterByText = (arr, search) => {
+  const result = arr.filter((item) =>
+    item.toLowerCase().includes(search.toLowerCase()),
+  );
+
+  return result.length > 0 ? result : `No countries contain ${search}`;
+};
+
+console.log(filterByText(updatedCountries, "land"));
+// Output: ["Finland", "Iceland", "Ireland"]
+// (Note: Ireland is included because it contains 'land'!)

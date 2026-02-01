@@ -128,3 +128,48 @@ const filterByText = (arr, search) => {
 console.log(filterByText(updatedCountries, "land"));
 // Output: ["Finland", "Iceland", "Ireland"]
 // (Note: Ireland is included because it contains 'land'!)
+
+// 7. Extract all the countries containing only four characters from
+// the countries array and print it as array
+// const countriesFourCharacters = updatedCountries.map((c) => c.slice(0, 4));
+// console.log(countriesFourCharacters);
+
+// The Correct Way: Filter for length
+const countriesFourCharacters = updatedCountries.filter((c) => c.length === 4);
+
+console.log(countriesFourCharacters);
+
+// 8. Extract all the countries containing two or more words from the countries array and print it as array
+// const countriesTwoMoreWords = updatedCountries.filter((c) => c.length >= 2);
+
+// console.log(countriesTwoMoreWords);
+
+// Option 1: The "Includes" way (Short & Sweet)
+// If it has a space, it has at least two words.
+const multiWordCountries = updatedCountries.filter((c) => c.includes(" "));
+
+// Option 2: The "Split" way (More robust)
+// This actually counts the words.
+const countriesTwoMoreWords = updatedCountries.filter((c) => {
+  return c.split(" ").length >= 2;
+});
+
+console.log(countriesTwoMoreWords);
+
+// 9. Reverse the countries array and capitalize each country and stored it as an array
+// const ex9 = updatedCountries
+//   .reverse()
+//   .map((c) => c.charAt(0).toUpperCase() + c.slice(1));
+
+// console.log(ex9);
+
+// BEST PRACTICE: Original array stays the same, ex9 gets the new data
+const ex9 = updatedCountries.toReversed().map((c) => c.toUpperCase()); // Since they are already capitalized, let's look at why we map
+console.log(ex9);
+
+const ex91 = [...updatedCountries] // 1. Create a shallow copy (prevents mutation)
+  .reverse() // 2. Reverse the copy
+  .map((c) => c.toUpperCase()); // 3. Transform (e.g., to all uppercase)
+
+console.log(ex91);
+console.log(updatedCountries); // Original is still in its original order!

@@ -29,3 +29,16 @@ function _fullName_(firstName, lastName) {
 }
 
 console.log(_fullName_("Peter", "Coker"));
+
+// best practice
+// 1. Use camelCase naming (standard JS practice)
+// 2. Use Template Literals for clean spacing
+function getFullName(firstName, lastName) {
+  return `${firstName} ${lastName}`;
+}
+
+console.log(getFullName("Peter", "Coker")); // Output: "Peter Coker"
+
+// const getFullName = (firstName, lastName) => `${firstName} ${lastName}`;
+
+// console.log(getFullName("Peter", "Coker"));

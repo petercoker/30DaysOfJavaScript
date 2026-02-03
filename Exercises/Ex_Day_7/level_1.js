@@ -42,3 +42,13 @@ console.log(getFullName("Peter", "Coker")); // Output: "Peter Coker"
 // const getFullName = (firstName, lastName) => `${firstName} ${lastName}`;
 
 // console.log(getFullName("Peter", "Coker"));
+
+// 3. Declare a function _addNumbers_ and it takes two two parameters and it returns sum.
+
+function _addNumbers_(num1, num2) {
+  return num1 + num2;
+}
+
+console.log("_addNumbers_:", _addNumbers_(2, 2));
+
+

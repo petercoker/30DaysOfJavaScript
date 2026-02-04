@@ -51,4 +51,58 @@ function _addNumbers_(num1, num2) {
 
 console.log("_addNumbers_:", _addNumbers_(2, 2));
 
+// 4. An area of a rectangle is calculated as follows: _area = length x width_. Write a function which calculates _areaOfRectangle_.
+function getAreaOfRectangle(length, width) {
+  return length * width;
+}
 
+console.log("getAreaOfRectangle:", getAreaOfRectangle(2, 2));
+
+// 5. A perimeter of a rectangle is calculated as follows: _perimeter= 2x(length + width)_.
+// Write a function which calculates _perimeterOfRectangle_.
+
+function _perimeterOfRectangle_(length, width) {
+  return 2 * (length + width);
+}
+
+console.log("_perimeterOfRectangle_:", _perimeterOfRectangle_(2, 2));
+
+// Function with many parameters.
+function organizeParty(host, coHost, ...h) {
+  console.log("The Host is:", host);
+  console.log("The Co-Host is:", coHost);
+  console.log("The Guest List array is:", h);
+}
+
+// Calling the function
+organizeParty("Peter", "Sarah", "John", "Kelly", "Jack", "Jill");
+
+console.log("_perimeterOfRectangle_:", _perimeterOfRectangle_(2, 2));
+
+function sumAllNums() {
+  console.log(arguments);
+}
+
+sumAllNums(1, 2, 3, 4);
+
+// 6. A volume of a rectangular prism is calculated as
+// follows: _volume = length x width x height_. Write a function which calculates _volumeOfRectPrism_.
+
+function _volumeOfRectPrism_(length, width, height_) {
+  return length * width * height_;
+}
+
+console.log("_volumeOfRectPrism_:", _volumeOfRectPrism_(2, 2, 2));
+
+//best practice
+// 1. Use camelCase naming (no underscores)
+// 2. Use clear, standard parameter names
+function volumeOfRectPrism(length, width, height) {
+  return length * width * height;
+}
+
+// 3. Use Template Literals for the output
+const l = 2,
+  w = 2,
+  h = 2;
+console.log(`The volume is: ${volumeOfRectPrism(l, w, h)}`);

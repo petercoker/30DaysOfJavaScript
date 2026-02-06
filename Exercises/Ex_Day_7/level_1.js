@@ -109,14 +109,13 @@ console.log(`The volume is: ${volumeOfRectPrism(l, w, h)}`);
 
 // 7. Area of a circle is calculated as follows: _area = π x r x r_. Write a function which calculates _areaOfCircle_
 
-function getAreaOfCircle(radius) {
-  return Math.PI * radius * radius;
-}
+// function getAreaOfCircle(radius) {
+//   return Math.PI * radius * radius;
+// }
 
-console.log("getAreaOfCircle:", getAreaOfCircle(2));
+// console.log("getAreaOfCircle:", getAreaOfCircle(2));
 
-
-//best practice 
+//best practice
 function getAreaOfCircle(radius) {
   // Use ** 2 for "squared"
   return Math.PI * radius ** 2;
@@ -126,3 +125,12 @@ console.log(`Area of Circle: ${getAreaOfCircle(2)}`);
 
 const area = getAreaOfCircle(2);
 console.log(area.toFixed(2)); // "12.57"
+
+// 8. Circumference of a circle is calculated as follows: _circumference = 2πr_.
+// Write a function which calculates _circumOfCircle_
+function getCircumference(radius) {
+  if (radius < 0) return "Radius cannot be negative";
+  return 2 * Math.PI * radius;
+}
+
+console.log("getCircumference:", getCircumference(2));

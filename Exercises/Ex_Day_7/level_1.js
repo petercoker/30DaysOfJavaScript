@@ -134,3 +134,20 @@ function getCircumference(radius) {
 }
 
 console.log("getCircumference:", getCircumference(2));
+
+// 9. Density of a substance is calculated as follows:_density= mass/volume_.
+// Write a function which calculates _density_.
+
+function getDensity(mass, volume) {
+  // Defensive check: You can't divide by zero!
+  if (volume === 0) return "Volume cannot be zero";
+  return mass / volume;
+}
+
+const density = getDensity(4, 2);
+
+console.log(`Area of Density: ${getDensity(4, 0)}`);
+
+// In real-world science applications, density usually comes with units (like kg/m³ or g/cm³).
+// To make your function even better, you could include the units in your return string:
+console.log(`Density: ${densityResult} kg/m³`);

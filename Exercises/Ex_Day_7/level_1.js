@@ -150,4 +150,28 @@ console.log(`Area of Density: ${getDensity(4, 0)}`);
 
 // In real-world science applications, density usually comes with units (like kg/m³ or g/cm³).
 // To make your function even better, you could include the units in your return string:
-console.log(`Density: ${densityResult} kg/m³`);
+console.log(`Density: ${density} kg/m³`);
+
+// 10. Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken.
+// Write a function which calculates a speed of a moving object, _speed_.
+function getDistance(speed, time) {
+  return speed * time;
+}
+
+console.log(`Distance: ${getDistance(120, 20)}`);
+
+// best practice
+// 1. Rename to match the actual goal
+function getSpeed(distance, time) {
+  // 2. Defensive check: Time cannot be zero (division by zero error)
+  if (time === 0) return "Time cannot be zero";
+
+  return distance / time;
+}
+
+const distance = 120;
+const time = 20;
+const speed = getSpeed(distance, time);
+
+// 3. Use descriptive labels in your logs
+console.log(`Speed: ${speed} km/h`);

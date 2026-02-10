@@ -175,3 +175,18 @@ const speed = getSpeed(distance, time);
 
 // 3. Use descriptive labels in your logs
 console.log(`Speed: ${speed} km/h`);
+
+// 11. Weight of a substance is calculated as follows: _weight = mass x gravity_. Write a function which calculates _weight_.
+function getWeight(mass, gravity) {
+  // Defensive check: Mass and gravity cannot be negative or zero
+  if (mass <= 0 || gravity <= 0)
+    return "Mass and gravity must be positive values";
+
+  return mass * gravity;
+}
+
+const mass = 10;
+const gravity = 9.8;
+const weight = getWeight(mass, gravity);
+
+console.log(`Weight: ${weight.toFixed(2)} N`);

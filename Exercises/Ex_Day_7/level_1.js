@@ -190,3 +190,16 @@ const gravity = 9.8;
 const weight = getWeight(mass, gravity);
 
 console.log(`Weight: ${weight.toFixed(2)} N`);
+
+
+// 12. Temperature in oC can be converted to oF using this formula: _oF = (oC x 9/5) + 32_. Write a function which convert oC to oF _convertCelsiusToFahrenheit_.
+
+function convertCelsiusToFahrenheit(celsius) {
+  const fahrenheit = (celsius * 9/5) + 32;
+  return fahrenheit;
+}
+
+
+const boilingPointC = 100;
+console.log(`${boilingPointC}°C is ${convertCelsiusToFahrenheit(boilingPointC)}°F`);
+// Output: 100°C is 212°F

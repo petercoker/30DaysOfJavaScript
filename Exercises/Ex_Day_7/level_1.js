@@ -191,15 +191,66 @@ const weight = getWeight(mass, gravity);
 
 console.log(`Weight: ${weight.toFixed(2)} N`);
 
-
 // 12. Temperature in oC can be converted to oF using this formula: _oF = (oC x 9/5) + 32_. Write a function which convert oC to oF _convertCelsiusToFahrenheit_.
 
 function convertCelsiusToFahrenheit(celsius) {
-  const fahrenheit = (celsius * 9/5) + 32;
+  /**
+   * Converts Celsius temperature to Fahrenheit.
+   *
+   * The conversion formula is:
+   * 1. Multiply the Celsius value by 9/5.
+   * 2. Add 32 to the result of the multiplication.
+   *
+   * @param {number} celsius - The temperature in Celsius to be converted.
+   * @returns {number} The equivalent temperature in Fahrenheit.
+   */
+  const fahrenheit = (celsius * 9) / 5 + 32;
   return fahrenheit;
 }
-
-
 const boilingPointC = 100;
-console.log(`${boilingPointC}°C is ${convertCelsiusToFahrenheit(boilingPointC)}°F`);
+console.log(
+  `${boilingPointC}°C is ${convertCelsiusToFahrenheit(boilingPointC)}°F`,
+);
 // Output: 100°C is 212°F
+
+// 13. Body mass index(BMI) is calculated as follows: _bmi = weight in Kg / (height x height) in m2_. Write a function which calculates _bmi_. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is _underweight, normal, overweight_ or _obese_ based the information given below.
+
+// - The same groups apply to both men and women.
+// - _Underweight_: BMI is less than 18.5
+// - _Normal weight_: BMI is 18.5 to 24.9
+// - _Overweight_: BMI is 25 to 29.9
+// - _Obese_: BMI is 30 or more
+
+/**
+ * Calculates BMI and returns the weight category
+ * @param {number} weight - Weight in kilograms
+ * @param {number} height - Height in meters
+ * @returns {string} BMI value and category
+ */
+function calculateBmi(weight, height) {
+  // Defensive checks
+  if (weight <= 0 || height <= 0) {
+    return "Weight and height must be positive values";
+  }
+
+  const bmi = weight / (height * height);
+
+  let category;
+  if (bmi < 18.5) {
+    category = "Underweight";
+  } else if (bmi < 25) {
+    category = "Normal weight";
+  } else if (bmi < 30) {
+    category = "Overweight";
+  } else {
+    category = "Obese";
+  }
+
+  return `BMI: ${bmi.toFixed(1)}, Category: ${category}`;
+}
+
+// Test the function
+console.log(calculateBmi(70, 1.75)); // Normal weight
+console.log(calculateBmi(55, 1.75)); // Underweight
+console.log(calculateBmi(85, 1.75)); // Overweight
+console.log(calculateBmi(95, 1.75)); // Obese

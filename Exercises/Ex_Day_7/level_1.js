@@ -272,22 +272,48 @@ const arr = [
   "Saturday",
   "Sunday",
 ];
-const index = 5;
-const value = "5th Item changed";
-function modifyFiveElementOfArray(array, index, value) {
+// const index = 5;
+// const value = "5th Item changed";
+function modifyFiveElementOfArray(array) {
   if (array.length <= 5) {
     return "item not found";
   }
   for (let index = 0; index < array.length; index++) {
+    // 4 is the 5th item
     if (index === 4) {
-      // const element = array[index];
       array[index] = "5th";
     }
   }
   return array;
-  // return array.splice(index, 0, value);
 }
 
-const result = modifyFiveElementOfArray(arr, index, value);
+const result = modifyFiveElementOfArray(arr);
 
 console.log(result);
+
+function modifyArray(array) {
+  // 1. Correct the condition: length must be at least 5
+  if (array.length < 5) {
+    return "item not found";
+  }
+
+  // 2. Create a copy to avoid "Side Effects" (Best Practice)
+  const newArray = [...array];
+
+  // 3. Direct modification (No loop needed!)
+  // newArray[4] = newArray[4].toUpperCase(); // Example modification
+  newArray[4] = "5th element changed"; // Example modification
+
+  return newArray;
+}
+
+// Testing the code
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+];
+console.log(modifyArray(countries));

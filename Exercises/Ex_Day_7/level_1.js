@@ -254,3 +254,40 @@ console.log(calculateBmi(70, 1.75)); // Normal weight
 console.log(calculateBmi(55, 1.75)); // Underweight
 console.log(calculateBmi(85, 1.75)); // Overweight
 console.log(calculateBmi(95, 1.75)); // Obese
+
+// 14. Write a function called _modifyArray_ takes array as parameter and modifies the fifth item of the array and return the array.
+// If the array length is less than five it return 'item not found'.
+
+// Write a function called _modifyArray_ takes array as parameter
+// and modifies the fifth item of the array
+// and return the array.
+// If the array length is less than five it return 'item not found'.
+
+const arr = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+const index = 5;
+const value = "5th Item changed";
+function modifyFiveElementOfArray(array, index, value) {
+  if (array.length <= 5) {
+    return "item not found";
+  }
+  for (let index = 0; index < array.length; index++) {
+    if (index === 4) {
+      // const element = array[index];
+      array[index] = "5th";
+    }
+  }
+  return array;
+  // return array.splice(index, 0, value);
+}
+
+const result = modifyFiveElementOfArray(arr, index, value);
+
+console.log(result);

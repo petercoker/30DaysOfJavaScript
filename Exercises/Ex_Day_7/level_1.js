@@ -332,3 +332,26 @@ function isPrime(num) {
 
   return true;
 }
+
+// 16. Write a functions which checks if all items are unique in the array.
+function getUniqueArray(arr) {
+  return [...new Set(arr)];
+}
+
+const arr1 = [2019, 2020, 2019, 2018, 2020, 2021, 2030, 2020, 2019];
+
+console.log(getUniqueArray(arr1));
+
+
+function isAllUnique(arr) {
+  // A Set only keeps unique values.
+  // If the sizes match, everything was unique!
+  return new Set(arr).size === arr.length;
+}
+
+
+const arr2 = [2019, 2020, 2019, 2018];
+
+console.log(isAllUnique(arr1)); // true
+console.log(isAllUnique(arr2)); // false
+

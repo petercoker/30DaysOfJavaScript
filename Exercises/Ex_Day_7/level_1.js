@@ -342,16 +342,39 @@ const arr1 = [2019, 2020, 2019, 2018, 2020, 2021, 2030, 2020, 2019];
 
 console.log(getUniqueArray(arr1));
 
-
 function isAllUnique(arr) {
   // A Set only keeps unique values.
   // If the sizes match, everything was unique!
   return new Set(arr).size === arr.length;
 }
 
-
 const arr2 = [2019, 2020, 2019, 2018];
 
 console.log(isAllUnique(arr1)); // true
 console.log(isAllUnique(arr2)); // false
 
+// 17. Write a function which checks
+// if all the items of the array are the same data type.
+
+const allSameType = (arr) => arr.every((item) => typeof item === typeof arr[0]);
+
+function isSameType(arr) {
+  return arr.every((item) => typeof item === typeof arr.at(0));
+}
+console.log(isSameType([1, 2, 3])); // true
+console.log(isSameType([1, "2", 3])); // false
+
+// best practice
+function isSameType(arr) {
+  // 1. Handle empty arrays
+  if (arr.length === 0) return true;
+
+  // 2. Cache the first type for a tiny bit more speed
+  const firstType = typeof arr[0];
+
+  // 3. Check every item against the first type
+  return arr.every((item) => item === firstType);
+}
+console.log(isSameType([1, 2, 3])); // true
+console.log(isSameType(["a", "b"])); // true
+console.log(isSameType([1, "2"])); // false

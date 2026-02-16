@@ -358,11 +358,11 @@ console.log(isAllUnique(arr2)); // false
 
 const allSameType = (arr) => arr.every((item) => typeof item === typeof arr[0]);
 
-function isSameType(arr) {
-  return arr.every((item) => typeof item === typeof arr.at(0));
-}
-console.log(isSameType([1, 2, 3])); // true
-console.log(isSameType([1, "2", 3])); // false
+// function isSameType(arr) {
+//   return arr.every((item) => typeof item === typeof arr.at(0));
+// }
+// console.log(isSameType([1, 2, 3])); // true
+// console.log(isSameType([1, "2", 3])); // false
 
 // best practice
 function isSameType(arr) {
@@ -378,3 +378,61 @@ function isSameType(arr) {
 console.log(isSameType([1, 2, 3])); // true
 console.log(isSameType(["a", "b"])); // true
 console.log(isSameType([1, "2"])); // false
+
+// 18. JavaScript variable name does not support special characters or symbols except \$ or \_.
+// Write a function **isValidVariable** which check if a variable is valid or invalid variable.
+
+// let dollorVariable = "$";
+// let underScoreariable = "_";
+
+// // const isValidVariable = (varible) => varible.include(dollorVariable)
+
+// function isValidVariable(variableName) {
+//   if (
+//     variableName.include(dollorVariable) ||
+//     variableName.include(underScoreariable)
+//   ) {
+//     return true;
+//   }
+//   return true;
+// }
+
+// best practice 
+function isValidVariable(variableName) {
+  // Regex Breakdown:
+  // ^[a-zA-Z$_]    -> Must start with a letter, $, or _
+  // [a-zA-Z0-9$_]* -> The rest can be letters, numbers, $, or _
+  // $              -> End of string
+  const validPattern = /^[a-zA-Z$_][a-zA-Z0-9$_]*$/;
+
+  return validPattern.test(variableName);
+}
+
+console.log(isValidVariable("myVar"));   // true
+console.log(isValidVariable("$money"));  // true
+console.log(isValidVariable("8ball"));   // false (starts with a number)
+console.log(isValidVariable("user-name")); // false (hyphens not allowed)
+
+
+console.log(isValidVariable("8"));
+
+//
+function isValidVariable(variableName) {
+  const allowed = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$_";
+  const numbers = "0123456789";
+
+  // Rule 1: Cannot be empty
+  if (!variableName) return false;
+
+  // Rule 2: Cannot start with a number
+  if (numbers.includes(variableName[0])) return false;
+
+  // Rule 3: Every single character must be in our "allowed" list
+  for (let char of variableName) {
+    if (!allowed.includes(char)) {
+      return false; // Found a space, hyphen, or emoji? Return false!
+    }
+  }
+
+  return true;
+}

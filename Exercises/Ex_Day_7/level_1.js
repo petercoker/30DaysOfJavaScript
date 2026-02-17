@@ -398,23 +398,23 @@ console.log(isSameType([1, "2"])); // false
 // }
 
 // best practice 
-function isValidVariable(variableName) {
-  // Regex Breakdown:
-  // ^[a-zA-Z$_]    -> Must start with a letter, $, or _
-  // [a-zA-Z0-9$_]* -> The rest can be letters, numbers, $, or _
-  // $              -> End of string
-  const validPattern = /^[a-zA-Z$_][a-zA-Z0-9$_]*$/;
+// function isValidVariable(variableName) {
+//   // Regex Breakdown:
+//   // ^[a-zA-Z$_]    -> Must start with a letter, $, or _
+//   // [a-zA-Z0-9$_]* -> The rest can be letters, numbers, $, or _
+//   // $              -> End of string
+//   const validPattern = /^[a-zA-Z$_][a-zA-Z0-9$_]*$/;
 
-  return validPattern.test(variableName);
-}
+//   return validPattern.test(variableName);
+// }
 
-console.log(isValidVariable("myVar"));   // true
-console.log(isValidVariable("$money"));  // true
-console.log(isValidVariable("8ball"));   // false (starts with a number)
-console.log(isValidVariable("user-name")); // false (hyphens not allowed)
+// console.log(isValidVariable("myVar"));   // true
+// console.log(isValidVariable("$money"));  // true
+// console.log(isValidVariable("8ball"));   // false (starts with a number)
+// console.log(isValidVariable("user-name")); // false (hyphens not allowed)
 
 
-console.log(isValidVariable("8"));
+// console.log(isValidVariable("8"));
 
 //
 function isValidVariable(variableName) {
@@ -436,3 +436,39 @@ function isValidVariable(variableName) {
 
   return true;
 }
+
+// 19. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+// function getUniqueRandoms(count, min, max) {
+//   const uniqueNumbers = new Set();
+  
+//   while (uniqueNumbers.size < count) {
+//     const randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
+//     uniqueNumbers.add(randomValue);
+//   }
+  
+//   return Array.from(uniqueNumbers); // Convert Set back to an Array
+// }
+
+// // Example: Get 5 unique numbers between 1 and 10
+// console.log(getUniqueRandoms(7, 0, 9));
+
+
+// best practice 
+function getUniqueRandoms(count, min, max) {
+  // 1. Safety Check: Ensure the range is large enough for the count
+  const range = max - min + 1;
+  if (count > range) {
+    return "Error: Count is larger than available unique numbers";
+  }
+
+  const uniqueNumbers = new Set();
+  
+  while (uniqueNumbers.size < count) {
+    const randomValue = Math.floor(Math.random() * range) + min;
+    uniqueNumbers.add(randomValue);
+  }
+  
+  return [...uniqueNumbers]; // Short-hand for Array.from()
+}
+
+console.log(getUniqueRandoms(7, 0, 9));

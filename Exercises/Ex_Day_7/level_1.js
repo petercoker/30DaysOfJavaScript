@@ -482,3 +482,12 @@ function reverseCountries(countriesArray) {
 }
 
 console.log(reverseCountries(countries));
+
+function reverseCountries1(countriesArray) {
+  // 1. Explicitly copy the array using the spread operator [...]
+  const copy = [...countriesArray];
+
+  // 2. Reverse the copy
+  return copy.reverse();
+}
+console.log(reverseCountries1(countries));

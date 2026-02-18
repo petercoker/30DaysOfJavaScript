@@ -1,3 +1,5 @@
+import { countries } from "../Ex_Day_5/countries.js";
+
 // Still learning - Arrow funcion
 
 // 1. Declare a function _fullName_ and it print out your full name.
@@ -308,14 +310,14 @@ function modifyArray(array) {
 }
 
 // Testing the code
-const countries = [
-  "Albania",
-  "Bolivia",
-  "Canada",
-  "Denmark",
-  "Ethiopia",
-  "Finland",
-];
+// const countries = [
+//   "Albania",
+//   "Bolivia",
+//   "Canada",
+//   "Denmark",
+//   "Ethiopia",
+//   "Finland",
+// ];
 console.log(modifyArray(countries));
 
 // 15. Write a function called _isPrime_,
@@ -397,7 +399,7 @@ console.log(isSameType([1, "2"])); // false
 //   return true;
 // }
 
-// best practice 
+// best practice
 // function isValidVariable(variableName) {
 //   // Regex Breakdown:
 //   // ^[a-zA-Z$_]    -> Must start with a letter, $, or _
@@ -413,12 +415,12 @@ console.log(isSameType([1, "2"])); // false
 // console.log(isValidVariable("8ball"));   // false (starts with a number)
 // console.log(isValidVariable("user-name")); // false (hyphens not allowed)
 
-
 // console.log(isValidVariable("8"));
 
 //
 function isValidVariable(variableName) {
-  const allowed = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$_";
+  const allowed =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$_";
   const numbers = "0123456789";
 
   // Rule 1: Cannot be empty
@@ -440,20 +442,19 @@ function isValidVariable(variableName) {
 // 19. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
 // function getUniqueRandoms(count, min, max) {
 //   const uniqueNumbers = new Set();
-  
+
 //   while (uniqueNumbers.size < count) {
 //     const randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
 //     uniqueNumbers.add(randomValue);
 //   }
-  
+
 //   return Array.from(uniqueNumbers); // Convert Set back to an Array
 // }
 
 // // Example: Get 5 unique numbers between 1 and 10
 // console.log(getUniqueRandoms(7, 0, 9));
 
-
-// best practice 
+// best practice
 function getUniqueRandoms(count, min, max) {
   // 1. Safety Check: Ensure the range is large enough for the count
   const range = max - min + 1;
@@ -462,13 +463,22 @@ function getUniqueRandoms(count, min, max) {
   }
 
   const uniqueNumbers = new Set();
-  
+
   while (uniqueNumbers.size < count) {
     const randomValue = Math.floor(Math.random() * range) + min;
     uniqueNumbers.add(randomValue);
   }
-  
+
   return [...uniqueNumbers]; // Short-hand for Array.from()
 }
 
 console.log(getUniqueRandoms(7, 0, 9));
+
+// 20. Write a function called reverseCountries,
+// it takes countries array and first it copy the array
+// and returns the reverse of the original array
+function reverseCountries(countriesArray) {
+  return countriesArray.toReversed();
+}
+
+console.log(reverseCountries(countries));

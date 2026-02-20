@@ -1,6 +1,18 @@
+// Linear equation is calculated as follows: _ax + by + c = 0_. 
+// Write a function which calculates value of a linear equation, _solveLinEquation_.
 
+function solveLinEquation(a, b, c, x) {
+  // If b is 0, we can't solve for y (division by zero error)
+  if (b === 0) {
+    return "Variable 'b' cannot be zero for this calculation.";
+  }
 
+  // Rearranging: by = -ax - c  =>  y = (-ax - c) / b
+  const y = (-a * x - c) / b;
+  return y;
+}
 
+console.log(solveLinEquation(1, 2, -4, 2)); // Should return 1
 
 
 // 15. Write a function called _isPrime_,

@@ -1,4 +1,4 @@
-// Linear equation is calculated as follows: _ax + by + c = 0_. 
+// Linear equation is calculated as follows: _ax + by + c = 0_.
 // Write a function which calculates value of a linear equation, _solveLinEquation_.
 
 function solveLinEquation(a, b, c, x) {
@@ -14,6 +14,45 @@ function solveLinEquation(a, b, c, x) {
 
 console.log(solveLinEquation(1, 2, -4, 2)); // Should return 1
 
+// 2. Quadratic equation is calculated as follows: _ax2 + bx + c = 0_.
+// Write a function which calculates value or values of a quadratic equation,
+// _solveQuadEquation_.
+//
+// console.log(solveQuadratic()) // {0}
+// console.log(solveQuadratic(1, 4, 4)) // {-2}
+// console.log(solveQuadratic(1, -1, -2)) // {2, -1}
+// console.log(solveQuadratic(1, 7, 12)) // {-3, -4}
+// console.log(solveQuadratic(1, 0, -4)) //{2, -2}
+// console.log(solveQuadratic(1, -1, 0)) //{1, 0}
+//
+
+function solveQuadEquation(a, b, c) {
+  // Handle the case where it's not actually a quadratic equation
+  if (a === 0) return "This is a linear equation, not quadratic.";
+
+  // 1. Calculate the Discriminant (D = b² - 4ac)
+  const discriminant = b ** 2 - 4 * a * c;
+
+  // 2. Case: Two real roots (D > 0)
+  if (discriminant > 0) {
+    const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+    return [root1, root2];
+  }
+
+  // 3. Case: One real root (D = 0)
+  if (discriminant === 0) {
+    const root = -b / (2 * a);
+    return [root];
+  }
+
+  // 4. Case: No real roots (D < 0)
+  return "No real roots exist.";
+}
+
+console.log(solveQuadEquation(1, 4, 4)); // [-2]
+console.log(solveQuadEquation(1, -1, -2)); // [2, -1]
+console.log(solveQuadEquation(1, 1, 1)); // No real roots exist.
 
 // 15. Write a function called _isPrime_,
 // which checks if a number is prime number.

@@ -29,17 +29,36 @@ console.log(solveLinEquation(1, 2, -4, 2)); // Should return 1
 // 3. Declare a function name _printArray_.
 // It takes array as a parameter and it prints out each value of the array.
 
-function printEachValue(arr) {
-  if (arr?.length === 0) {
-    return console.log("Empty array");
+// function printEachValue(arr) {
+//   if (arr?.length === 0) {
+//     return console.log("Empty array");
+//   }
+//   arr.forEach((value) => {
+//     console.log(value);
+//   });
+// }
+
+// printEachValue([1, 3, 5, 5]);
+// printEachValue([]);
+
+// best practice
+function printArray(arr) {
+  // 1. Check if the input is actually an array
+  if (!Array.isArray(arr)) {
+    return console.error("Input is not an array");
   }
-  arr.forEach((value) => {
-    console.log(value);
-  });
+
+  // 2. Handle empty case (Optional, but good UX)
+  if (arr.length === 0) {
+    console.log("Empty array");
+    return;
+  }
+
+  // 3. Print each value
+  arr.forEach((value) => console.log(value));
 }
 
-printEachValue([1, 3, 5, 5]);
-printEachValue([]);
+printArray([1, 3, 5, 5]);
 
 function solveQuadEquation(a, b, c) {
   // Handle the case where it's not actually a quadratic equation

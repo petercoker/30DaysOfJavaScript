@@ -26,6 +26,21 @@ console.log(solveLinEquation(1, 2, -4, 2)); // Should return 1
 // console.log(solveQuadratic(1, -1, 0)) //{1, 0}
 //
 
+// 3. Declare a function name _printArray_.
+// It takes array as a parameter and it prints out each value of the array.
+
+function printEachValue(arr) {
+  if (arr?.length === 0) {
+    return console.log("Empty array");
+  }
+  arr.forEach((value) => {
+    console.log(value);
+  });
+}
+
+printEachValue([1, 3, 5, 5]);
+printEachValue([]);
+
 function solveQuadEquation(a, b, c) {
   // Handle the case where it's not actually a quadratic equation
   if (a === 0) return "This is a linear equation, not quadratic.";
@@ -211,17 +226,17 @@ console.log(getUniqueRandoms(7, 0, 9));
 // 20. Write a function called reverseCountries,
 // it takes countries array and first it copy the array
 // and returns the reverse of the original array
-function reverseCountries(countriesArray) {
-  return countriesArray.toReversed();
-}
+// function reverseCountries(countriesArray) {
+//   return countriesArray.toReversed();
+// }
 
-console.log(reverseCountries(countries));
+// console.log(reverseCountries(countries));
 
-function reverseCountries1(countriesArray) {
-  // 1. Explicitly copy the array using the spread operator [...]
-  const copy = [...countriesArray];
+// function reverseCountries1(countriesArray) {
+//   // 1. Explicitly copy the array using the spread operator [...]
+//   const copy = [...countriesArray];
 
-  // 2. Reverse the copy
-  return copy.reverse();
-}
-console.log(reverseCountries1(countries));
+//   // 2. Reverse the copy
+//   return copy.reverse();
+// }
+// console.log(reverseCountries1(countries));

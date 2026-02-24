@@ -108,6 +108,9 @@ function showDateTime(date) {
 const date = new Date("2020-01-08T04:08:00");
 console.log(showDateTime(date));
 
+
+// 5. Declare a function name _swapValues_. This function swaps value of x to y.
+
 function swapValues(x, y) {
   let temporary = x;
   x = y;

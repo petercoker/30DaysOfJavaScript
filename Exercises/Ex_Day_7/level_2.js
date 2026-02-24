@@ -108,14 +108,22 @@ function showDateTime(date) {
 const date = new Date("2020-01-08T04:08:00");
 console.log(showDateTime(date));
 
-
 // 5. Declare a function name _swapValues_. This function swaps value of x to y.
 
+// function swapValues(x, y) {
+//   let temporary = x;
+//   x = y;
+//   y = temporary;
+//   console.log(`x = ${x}, y = ${y}`);
+// }
+
+// swapValues(3, 4);
+
+// best practice
 function swapValues(x, y) {
-  let temporary = x;
-  x = y;
-  y = temporary;
+  // Use array destructuring to swap them in one line
+  [x, y] = [y, x];
   console.log(`x = ${x}, y = ${y}`);
 }
 
-swapValues(3, 4);
+swapValues(3, 4); // x = 4, y = 3

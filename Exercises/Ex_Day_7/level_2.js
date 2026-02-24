@@ -107,3 +107,12 @@ function showDateTime(date) {
 
 const date = new Date("2020-01-08T04:08:00");
 console.log(showDateTime(date));
+
+function swapValues(x, y) {
+  let temporary = x;
+  x = y;
+  y = temporary;
+  console.log(`x = ${x}, y = ${y}`);
+}
+
+swapValues(3, 4);

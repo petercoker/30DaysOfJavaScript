@@ -127,3 +127,41 @@ function swapValues(x, y) {
 }
 
 swapValues(3, 4); // x = 4, y = 3
+
+// 6. Declare a function name _reverseArray_.
+// It takes array as a parameter and it returns the reverse of the array
+// (don't use method).
+
+// const arr = [1, 2, 3, 4, 5];
+
+// function reverseArray(arr) {
+//   // start at the end of the array
+//   // and stores the into a new array
+//   // used due arr.at(-1) instead of arr.length - 1 as its more readable and concise. Also I'm not building a .
+//   let reverseArr = [];
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     // for (let i = arr.at(-1); i >= 0; i--) { (cause ) [ undefined, 5, 4, 3, 2, 1 ]
+//     // console.log(arr[i], reverseArr);
+//     reverseArr.push(arr[i]);
+//     // console.log(arr[i], reverseArr);
+//   }
+//   // console.log(reverseArr);
+//   return reverseArr;
+// }
+
+// console.log(reverseArray(arr));
+
+// best practice 
+function reverseArray(arr) {
+  const reversed = [];
+  
+  // Starting from the last index (length - 1) down to 0
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reversed.push(arr[i]);
+  }
+  
+  return reversed;
+}
+
+const original = [1, 2, 3, 4, 5];
+console.log(reverseArray(original)); // [5, 4, 3, 2, 1]

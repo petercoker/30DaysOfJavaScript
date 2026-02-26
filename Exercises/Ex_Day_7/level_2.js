@@ -188,3 +188,23 @@ function capitalizeArray(arr) {
 
 const animals = ["dog", "CAT", "fRoG"];
 console.log(capitalizeArray(animals)); // ["Dog", "Cat", "Frog"]
+
+// 8. Declare a function name _addItem_.
+// It takes an item parameter and it returns an array after adding the item
+
+// This changes the original array not good
+// function addItem(item, list) {
+//   list.push(item);
+//   return list;
+// }
+
+// Best Practice: The original list remains untouched
+function addItem(item, list) {
+  return [...list, item];
+}
+
+const groceryList = ["Milk", "Eggs"]; // ['Milk', 'Eggs'] (Original is safe!)
+const newList = addItem("Bread", groceryList); // ['Milk', 'Eggs', 'Bread']
+
+console.log(groceryList);
+console.log(newList);

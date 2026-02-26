@@ -151,17 +151,40 @@ swapValues(3, 4); // x = 4, y = 3
 
 // console.log(reverseArray(arr));
 
-// best practice 
+// best practice
 function reverseArray(arr) {
   const reversed = [];
-  
+
   // Starting from the last index (length - 1) down to 0
   for (let i = arr.length - 1; i >= 0; i--) {
     reversed.push(arr[i]);
   }
-  
+
   return reversed;
 }
 
 const original = [1, 2, 3, 4, 5];
+original;
 console.log(reverseArray(original)); // [5, 4, 3, 2, 1]
+
+// 7. Declare a function name _capitalizeArray_.
+// It takes array as a parameter and it returns the - capitalizedarray
+
+// function capitalizedarray(arr) {
+//   return arr.map((name) => name[0].toUpperCase() + name.slice(1));
+// }
+
+// const animals = ["dog", "cat", "frog", "snake"];
+// console.log(capitalizedarray(animals));
+
+function capitalizeArray(arr) {
+  // .map() creates a NEW array, which follows the rule of "Immutability"
+  // 1. Capitalize first letter
+  // 2. Attach the rest of the string starting from index 1
+  return arr.map((word) =>
+    word ? word[0].toUpperCase() + word.slice(1).toLowerCase() : "",
+  );
+}
+
+const animals = ["dog", "CAT", "fRoG"];
+console.log(capitalizeArray(animals)); // ["Dog", "Cat", "Frog"]
